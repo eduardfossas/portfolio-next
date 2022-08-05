@@ -9,7 +9,7 @@ import { Outro } from "components/Outro";
 import { StickyLink } from "components/StickyLink";
 import useMatchMedia from "hooks/useMatchMedia";
 
-export default function Home({
+const Cases = ({
   project: {
     title,
     hero,
@@ -23,7 +23,7 @@ export default function Home({
     ctaLink,
   },
   nextProject,
-}) {
+}) => {
   const contentAnimation = useAnimation();
   const mobileLink = useAnimation();
   const isMobile = useMatchMedia("(max-width: 1024px)");
@@ -86,22 +86,40 @@ export default function Home({
       </main>
     </>
   );
-}
+};
 
-export const getStaticProps = async () => {
+export const getStaticPaths = async () => {
+  const {
+    data: { stories },
+  } = await storyblokPreviewClient.get("cdn/stories", {
+    starts_with: "cases/",
+  });
+
+  const paths = stories.map(({ slug }) => ({ params: { slug } }));
+
+  return {
+    paths,
+    fallback: false,
+  };
+};
+
+export const getStaticProps = async ({ params: { slug } }) => {
   const {
     data: {
       story: { content: project },
     },
-  } = await storyblokPreviewClient.get(`cdn/stories/cases/foam`);
+  } = await storyblokPreviewClient.get(`cdn/stories/cases/${slug}`);
 
   const {
-    data: {
-      story: { content: nextProject, slug: nextProjectSlug },
-    },
-  } = await storyblokPreviewClient.get(`cdn/stories/cases/moooi`);
+    data: { stories: allCases },
+  } = await storyblokPreviewClient.get("cdn/stories?starts_with=cases", {});
 
-  const { hero = "", title = "" } = nextProject;
+  const nextProjectIndex = allCases.findIndex((curr) => curr.slug === slug) + 1;
+  const resetProjects = nextProjectIndex === allCases.length;
+
+  const { hero = "", title = "" } = resetProjects
+    ? allCases[0].content
+    : allCases[nextProjectIndex]?.content || {};
 
   return {
     props: {
@@ -109,8 +127,12 @@ export const getStaticProps = async () => {
       nextProject: {
         hero,
         title,
-        slug: nextProjectSlug,
+        slug: resetProjects
+          ? allCases[0]?.slug
+          : allCases[nextProjectIndex]?.slug || "",
       },
     },
   };
 };
+
+export default Cases;
