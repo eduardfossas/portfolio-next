@@ -76,8 +76,8 @@ const Hero = ({ image, title, client }) => {
           objectFit="cover"
           layout="fill"
           sizes="100vw"
-          quality="100"
-          priority={true}
+          quality="90"
+          priority="true"
           aria-hidden="false"
         />
       </HeroImageMobile>
@@ -89,8 +89,8 @@ const Hero = ({ image, title, client }) => {
           objectFit="cover"
           layout="fill"
           sizes="100vw"
-          quality="100"
-          priority={true}
+          quality="90"
+          priority="true"
         />
       </HeroImage>
 

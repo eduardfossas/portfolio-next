@@ -168,8 +168,9 @@ const Outro = ({ title, hero, slug, contentAnimation, linkAnimation }) => {
               src={hero.filename}
               objectFit="cover"
               layout="fill"
-              quality="100"
+              quality="90"
               size="100vw"
+              priority="true"
             />
           </MotionImage>
         </CoverImage>
