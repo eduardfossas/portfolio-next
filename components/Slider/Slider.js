@@ -51,7 +51,7 @@ const Slider = ({ slides }) => {
         {slides.map((el) => {
           return (
             <SliderItem key={el.id} tabIndex={1}>
-              <img src={el.filename} />
+              <img src={el.filename} alt={el.alt || "Coming soon"} />
             </SliderItem>
           );
         })}
