@@ -37,7 +37,7 @@ export default function Home({
   return (
     <>
       <Head>
-        <title>{title}</title>
+        <title>Eduard Fossas | {title}</title>
       </Head>
       <main>
         <motion.div animate={contentAnimation}>
