@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import mediaQueries from "styles/mediaQueries";
+import Image from "next/image";
 
 const Container = styled.article`
   width: 100%;
@@ -26,6 +27,7 @@ const SliderScroll = styled.div`
 const SliderItem = styled.div`
   flex: 0 0 65vw;
   margin: 0 5px;
+  position: relative;
 
   &:first-child {
     margin-left: 0;
@@ -51,7 +53,16 @@ const Slider = ({ slides }) => {
         {slides.map((el) => {
           return (
             <SliderItem key={el.id} tabIndex={1}>
-              <img src={el.filename} alt={el.alt || "Coming soon"} />
+              <Image
+                alt={el.alt || "Coming soon"}
+                src={el.filename}
+                layout="responsive"
+                width="1920"
+                height="1440"
+                sizes="65vw"
+                quality="100"
+                priority="true"
+              />
             </SliderItem>
           );
         })}
