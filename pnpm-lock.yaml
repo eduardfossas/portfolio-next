@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@use-gesture/react': ^10.2.18
   axios: ^0.27.2
   babel-plugin-styled-components: ^2.0.7
   eslint: 8.20.0
@@ -13,6 +14,7 @@ specifiers:
   styled-components: ^5.3.5
 
 dependencies:
+  '@use-gesture/react': 10.2.18_react@18.2.0
   axios: 0.27.2
   framer-motion: 6.5.1_biqbaboplfbrettd7655fr4n2y
   next: 12.2.3_biqbaboplfbrettd7655fr4n2y
@@ -495,6 +497,19 @@ packages:
       '@typescript-eslint/types': 5.30.7
       eslint-visitor-keys: 3.3.0
     dev: true
+
+  /@use-gesture/core/10.2.18:
+    resolution: {integrity: sha512-O+qxBlKxPtYM/LyRnK/U5MhVA9kKHj4C2yHsUurDxNO0a8D1PHLz9YmMPh2UXGQE4wtSke03GsLqRsHbUvN9nw==}
+    dev: false
+
+  /@use-gesture/react/10.2.18_react@18.2.0:
+    resolution: {integrity: sha512-MJQ5q/huXIER3st3bsmuWA7lxcdwZd28KJoBPFPNxKFenjF47smaiCCf+dLjUBiTV0DiIYAN4pXK19KxwfnUgg==}
+    peerDependencies:
+      react: '>= 16.8.0'
+    dependencies:
+      '@use-gesture/core': 10.2.18
+      react: 18.2.0
+    dev: false
 
   /acorn-jsx/5.3.2_acorn@8.8.0:
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}

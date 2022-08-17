@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@use-gesture/react": "^10.2.18",
     "axios": "^0.27.2",
     "framer-motion": "^6.5.1",
     "next": "12.2.3",
