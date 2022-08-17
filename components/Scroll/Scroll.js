@@ -35,8 +35,6 @@ const Scroll = ({ children }) => {
           state.event.preventDefault();
         }
 
-    
-
         if (state.axis === "y") {
           element.current.scrollBy({ left: state.delta[1] });
         }

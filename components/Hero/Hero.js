@@ -51,7 +51,7 @@ const Title = styled(motion.div)`
   font-weight: 400;
   margin: 0;
 
-  small {
+  span {
     display: block;
     font-size: 4vw;
   }
@@ -102,7 +102,7 @@ const Hero = ({ image, title, client }) => {
             transition: { delay: 0.25, duration: 1, ease: [0.87, 0, 0.13, 1] },
           }}
         >
-          <small>{client}</small>
+          <span>{client}</span>
           {title}
         </Title>
       </HeroTitle>

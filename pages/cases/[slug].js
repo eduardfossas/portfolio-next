@@ -34,10 +34,11 @@ const Cases = ({
     { title: "Type", value: tags },
   ];
 
+
   return (
     <>
       <Head>
-        <title>Eduard Fossas | {title}</title>
+        <title>{`Eduard Fossas | ${title}`}</title>
       </Head>
       <main>
         <motion.div animate={contentAnimation}>
