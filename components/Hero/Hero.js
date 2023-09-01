@@ -35,25 +35,36 @@ const HeroImage = styled.figure`
   }
 `;
 
-const HeroTitle = styled.div`
-  width: 80%;
+const HeroTitle = styled(motion.div)`
+  width: 100%;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  background-color: white;
   text-align: center;
   line-height: 1;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  bottom: -30px;
+  padding: 0 24px;
+  display: none;
+
+  ${mediaQueries.m} {
+    height: 96px;
+    bottom: 0;
+    justify-content: center;
+    display: flex;
+  }
 `;
 
 const Title = styled(motion.div)`
-  font-size: 7.2vw;
-  color: #fff;
+  font-size: 24px;
+  color: #000;
   font-weight: 400;
   margin: 0;
+  font-weight: bold;
 
   span {
-    display: block;
-    font-size: 4vw;
+    font-weight: normal;
   }
 `;
 
@@ -94,7 +105,14 @@ const Hero = ({ image, title, client }) => {
         />
       </HeroImage>
 
-      <HeroTitle aria-hidden="true">
+      <HeroTitle
+        aria-hidden="true"
+        initial={{ y: 100 }}
+        animate={{
+          y: 0,
+          transition: { delay: 0, duration: 1, ease: [0.87, 0, 0.13, 1] },
+        }}
+      >
         <Title
           initial={{ opacity: 0 }}
           animate={{
@@ -102,7 +120,7 @@ const Hero = ({ image, title, client }) => {
             transition: { delay: 0.25, duration: 1, ease: [0.87, 0, 0.13, 1] },
           }}
         >
-          <span>{client}</span>
+          <span>{client} </span>
           {title}
         </Title>
       </HeroTitle>

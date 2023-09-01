@@ -34,7 +34,6 @@ const Cases = ({
     { title: "Type", value: tags },
   ];
 
-
   return (
     <>
       <Head>
@@ -57,28 +56,25 @@ const Cases = ({
           >
             <Intro details={details} description={intro} />
             <Slider slides={slider} />
-            <Colophon title={ctaTitle} text={ctaText} link={ctaLink.url} />
           </motion.div>
         </motion.div>
-        {isMobile && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{
-              opacity: 1,
-              transition: {
-                delay: 0.25,
-                duration: 1,
-                ease: [0.87, 0, 0.13, 1],
-              },
-            }}
-          >
-            <StickyLink
-              title={ctaTitle}
-              link={ctaLink.url}
-              animation={mobileLink}
-            />
-          </motion.div>
-        )}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{
+            opacity: 1,
+            transition: {
+              delay: 0.25,
+              duration: 1,
+              ease: [0.87, 0, 0.13, 1],
+            },
+          }}
+        >
+          <StickyLink
+            title={ctaTitle}
+            link={ctaLink.url}
+            animation={mobileLink}
+          />
+        </motion.div>
         <Outro
           {...nextProject}
           contentAnimation={contentAnimation}

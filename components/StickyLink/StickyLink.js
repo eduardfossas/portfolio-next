@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { motion, useAnimation } from "framer-motion";
+import mediaQueries from "styles/mediaQueries";
+import { motion } from "framer-motion";
 import { SrOnly } from "components/SrOnly";
-import { useEffect } from "react";
 
 const Container = styled(motion.div)`
   margin: 0;
@@ -14,25 +14,32 @@ const Container = styled(motion.div)`
 
 const ExtLink = styled.a`
   text-decoration: none;
-  color: #fff;
+  color: #222;
   font-weight: 700;
   line-height: 1;
   position: fixed;
   bottom: 1rem;
   right: 1rem;
-  background: #222;
+  background: #fff;
+  border: 1px solid #222;
   padding: 10px 20px;
   border-radius: 9999px;
+  transition: background 300ms cubic-bezier(0.87, 0, 0.13, 1),
+    color 300ms cubic-bezier(0.87, 0, 0.13, 1);
 
   span {
     display: inline-block;
-    transition: transform 300ms cubic-bezier(0.87, 0, 0.13, 1);
+    position: relative;
+    transform: translateY(2px);
   }
 
   &:hover {
-    span {
-      transform: translateX(3px);
-    }
+    background: #222;
+    color: #fff;
+  }
+
+  ${mediaQueries.m} {
+    bottom: 28px;
   }
 `;
 
@@ -46,7 +53,7 @@ const StickyLink = ({ title, link, animation }) => {
         rel="noopener noreferrer"
       >
         {title} <SrOnly>clicking this link</SrOnly>
-        <span aria-hidden="true">--&gt;</span>
+        <span aria-hidden="true">↗</span>
       </ExtLink>
     </Container>
   );

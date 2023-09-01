@@ -19,22 +19,24 @@ const Element = styled.div`
 
 const Title = styled(motion.div)`
   position: absolute;
-  font-size: 1.8rem;
+  font-size: 24px;
   font-weight: 400;
   text-align: center;
-  color: #000;
+  color: #333;
   bottom: 50%;
   pointer-events: auto;
+  font-weight: 600;
+  line-height: 1.1;
 
   small {
     display: block;
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 500;
   }
 
   ${mediaQueries.m} {
-    bottom: auto;
-    color: #fff;
+    color: #333;
+    bottom: 105%;
   }
 `;
 

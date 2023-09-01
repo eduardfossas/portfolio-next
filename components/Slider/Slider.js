@@ -9,7 +9,7 @@ const Container = styled.article`
   margin: 6rem 0 4vh;
 
   ${mediaQueries.m} {
-    margin: 6rem 0 0;
+    margin: 6rem 0 12rem;
   }
 `;
 

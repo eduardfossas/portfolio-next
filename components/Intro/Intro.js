@@ -21,12 +21,12 @@ const IntroDetails = styled.div`
   margin-bottom: 2rem;
 
   ${mediaQueries.m} {
-    flex: 1 0 20%;
+    flex: 1 0 25%;
   }
 `;
 
 const IntroText = styled.p`
-  font-size: 2rem;
+  font-size: 24px;
   margin: 0;
 `;
 
@@ -36,7 +36,7 @@ const List = styled.ul`
   margin: 0;
 
   li {
-    padding: 0 0 1rem;
+    padding: 0 0 0.75rem;
   }
 `;
 
