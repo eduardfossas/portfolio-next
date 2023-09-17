@@ -163,7 +163,7 @@ const Header = ({ key }) => {
                       That was my first profession and where my journey started.
                       I absolutely loved it and I have real nostalgia about
                       those days, long live to the analog world. You can check
-                      my printed works here: Links coming soon.
+                      my printed works here: (Links coming soon.)
                     </SmallP>
                   </SectionArticle>
 
@@ -182,7 +182,7 @@ const Header = ({ key }) => {
                     <SmallP>
                       I am a self taught Frontend Developer and I have been
                       working as one for almost a decade. You can check my
-                      recent work in this page.
+                      recent works in this page.
                     </SmallP>
                   </SectionArticle>
 
@@ -193,7 +193,7 @@ const Header = ({ key }) => {
                       frontend developer. You can check most of this works in
                       this webpage. I also created the @creativedvloper account
                       where I post mostly creative coding sketches born out of
-                      curiosity.
+                      curiosity.(Links coming soon.)
                     </SmallP>
                   </SectionArticle>
 
@@ -202,7 +202,8 @@ const Header = ({ key }) => {
                     <SmallP>
                       Writing has always been a joy of mine but never publicly.
                       I decided to start my own blog this year where I write
-                      about everything. You can read it here.
+                      about everything. You can read it here. (Links coming
+                      soon.)
                     </SmallP>
                   </SectionArticle>
 
@@ -213,7 +214,8 @@ const Header = ({ key }) => {
                       learning creative development libraries like Three.js,
                       Openframeworks or P5.js. I created my own WebGPU rendering
                       engine to get knowledge about how computer graphics work.
-                      You can check it in this github repository.
+                      You can check it in this github repository. (Links coming
+                      soon.)
                     </SmallP>
                   </SectionArticle>
 
@@ -222,7 +224,8 @@ const Header = ({ key }) => {
                     <SmallP>
                       I have a background in painting and drawing. What I always
                       enjoyed the most was sketching and drawing ideas. You can
-                      check some of my current Ilustrations in my blog.
+                      check some of my current Ilustrations in my blog. (Links
+                      coming soon.)
                     </SmallP>
                   </SectionArticle>
                 </CategorySections>
