@@ -7,6 +7,7 @@ import { Intro } from "components/Intro";
 import { Slider } from "components/Slider";
 import { Outro } from "components/Outro";
 import { StickyLink } from "components/StickyLink";
+import { Header } from "components/Header";
 
 export default function Home({
   project: {
@@ -37,7 +38,7 @@ export default function Home({
       <Head>
         <title>{`Eduard Fossas | ${title}`}</title>
       </Head>
-
+      <Header />
       <main>
         <motion.div animate={contentAnimation}>
           <Hero image={hero} title={title} client={client} />
