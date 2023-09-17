@@ -1,5 +1,5 @@
 import { useGesture } from "@use-gesture/react";
-import { useRef, useCallback } from "react";
+import { useRef } from "react";
 
 import styled from "styled-components";
 
@@ -25,13 +25,16 @@ const Scroll = ({ children }) => {
   useGesture(
     {
       onWheel: (state) => {
-        const maxScrollWidth = element.current.scrollWidth - window.innerWidth
-        
-        if(!(element.current.scrollLeft >= maxScrollWidth) && state.direction[1] == 1) {
+        const maxScrollWidth = element.current.scrollWidth - window.innerWidth;
+
+        if (
+          !(element.current.scrollLeft >= maxScrollWidth) &&
+          state.direction[1] == 1
+        ) {
           state.event.preventDefault();
         }
 
-        if(!(element.current.scrollLeft === 0) && state.direction[1] == -1) {
+        if (!(element.current.scrollLeft === 0) && state.direction[1] == -1) {
           state.event.preventDefault();
         }
 
@@ -46,7 +49,11 @@ const Scroll = ({ children }) => {
     }
   );
 
-  return <Container ref={element}>{children}</Container>;
+  return (
+    <Container ref={element} data-lenis-prevent>
+      {children}
+    </Container>
+  );
 };
 
 export { Scroll };

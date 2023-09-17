@@ -6,6 +6,8 @@ import mediaQueries from "styles/mediaQueries";
 import { motion, useAnimation } from "framer-motion";
 import { useRouter } from "next/router";
 import useMatchMedia from "hooks/useMatchMedia";
+import { ScrollContext } from "context";
+import { useContext } from "react";
 
 const Element = styled.div`
   display: flex;
@@ -80,6 +82,7 @@ const MotionImage = styled(motion.div)`
 `;
 
 const Outro = ({ title, hero, slug, contentAnimation, linkAnimation }) => {
+  const { scroll } = useContext(ScrollContext);
   const { push } = useRouter();
   const animate = useAnimation();
   const coverAnimate = useAnimation();
@@ -91,6 +94,7 @@ const Outro = ({ title, hero, slug, contentAnimation, linkAnimation }) => {
   const loadNextProject = async () => {
     if (clicked.current) return;
     document.body.style.overflow = "hidden";
+
     const { top, height } = imageRef.current.getBoundingClientRect();
     const marginTop = ((height * 100) / 85 - height) / 2;
 
@@ -115,6 +119,8 @@ const Outro = ({ title, hero, slug, contentAnimation, linkAnimation }) => {
     });
 
     if (!isMobile) {
+      await scroll.current.scrollTo(imageRef.current);
+
       await animate.start({
         x: ["-50%", "-50%"],
         y: isMobile ? ["0vh", "-50vh"] : ["50%", "-50%"],

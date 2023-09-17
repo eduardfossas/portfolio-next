@@ -1,13 +1,12 @@
 import { motion, useAnimation } from "framer-motion";
+
 import Head from "next/head";
 import { storyblokPreviewClient } from "clients";
 import { Hero } from "components/Hero";
 import { Intro } from "components/Intro";
 import { Slider } from "components/Slider";
-import { Colophon } from "components/Colophon";
 import { Outro } from "components/Outro";
 import { StickyLink } from "components/StickyLink";
-import useMatchMedia from "hooks/useMatchMedia";
 
 export default function Home({
   project: {
@@ -18,7 +17,6 @@ export default function Home({
     tags,
     intro,
     slider,
-    ctaText,
     ctaTitle,
     ctaLink,
   },
@@ -26,7 +24,7 @@ export default function Home({
 }) {
   const contentAnimation = useAnimation();
   const mobileLink = useAnimation();
-  const isMobile = useMatchMedia("(max-width: 1024px)");
+
   const details = [
     { title: "Title", value: title },
     { title: "Client", value: client },
@@ -39,6 +37,7 @@ export default function Home({
       <Head>
         <title>{`Eduard Fossas | ${title}`}</title>
       </Head>
+
       <main>
         <motion.div animate={contentAnimation}>
           <Hero image={hero} title={title} client={client} />

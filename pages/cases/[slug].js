@@ -4,10 +4,9 @@ import { storyblokPreviewClient } from "clients";
 import { Hero } from "components/Hero";
 import { Intro } from "components/Intro";
 import { Slider } from "components/Slider";
-import { Colophon } from "components/Colophon";
 import { Outro } from "components/Outro";
 import { StickyLink } from "components/StickyLink";
-import useMatchMedia from "hooks/useMatchMedia";
+import { Header } from "components/Header";
 
 const Cases = ({
   project: {
@@ -26,7 +25,6 @@ const Cases = ({
 }) => {
   const contentAnimation = useAnimation();
   const mobileLink = useAnimation();
-  const isMobile = useMatchMedia("(max-width: 1024px)");
   const details = [
     { title: "Title", value: title },
     { title: "Client", value: client },
@@ -39,6 +37,7 @@ const Cases = ({
       <Head>
         <title>{`Eduard Fossas | ${title}`}</title>
       </Head>
+      <Header />
       <main>
         <motion.div animate={contentAnimation}>
           <Hero image={hero} title={title} client={client} />

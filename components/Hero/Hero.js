@@ -2,7 +2,6 @@ import styled from "styled-components";
 import Image from "next/image";
 import mediaQueries from "styles/mediaQueries";
 import { motion } from "framer-motion";
-import useMatchMedia from "hooks/useMatchMedia";
 
 const HeroWrapper = styled.article`
   position: relative;
