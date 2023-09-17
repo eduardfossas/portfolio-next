@@ -38,12 +38,13 @@ const Box = styled(motion.article)`
   right: 0;
   height: 100%;
   background: #fff;
-  padding: 24px 24px;
+  padding: 0;
   z-index: 10;
   font-size: 16px;
 
   ${mediaQueries.m} {
     width: 800px;
+    padding: 24px 24px;
   }
 `;
 
@@ -98,6 +99,12 @@ const Scroll = styled.div`
   width: 100%;
   padding: 0 24px;
   overscroll-behavior: contain;
+
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
 const StyledLink = styled.a`
@@ -106,16 +113,34 @@ const StyledLink = styled.a`
   cursor: pointer;
 `;
 
+const Close = styled(motion.div)`
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  z-index: 11;
+  font-size: 32px;
+  font-weight: 300;
+  background-color: white;
+  border: 1px solid black;
+  line-height: 1;
+  color: black;
+  width: 32px;
+  height: 32px;
+  border-radius: 9999px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+
+  ${mediaQueries.m} {
+    display: none;
+  }
+`;
+
 const Header = ({ key }) => {
   const { scroll } = useContext(ScrollContext);
   const [isNavOpen, setNavOpen] = useState();
   return (
-    <Wrapper
-      key={key}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
+    <Wrapper>
       <Nav>
         <StyledLink href="mailto:eduardfp@gmail.com">Contact</StyledLink>
         <div>Eduard Fossas</div>
@@ -131,6 +156,17 @@ const Header = ({ key }) => {
       <AnimatePresence>
         {isNavOpen && (
           <Aside>
+            <Close
+              onClick={() => {
+                scroll.current.start();
+                setNavOpen(false);
+              }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1, transition: { delay: 0.5 } }}
+              exit={{ opacity: 0 }}
+            >
+              ✗
+            </Close>
             <Box
               tabIndex={1}
               initial={{ x: "100%" }}
