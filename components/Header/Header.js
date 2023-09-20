@@ -87,6 +87,10 @@ const SmallP = styled.p`
 const CategorySections = styled.section`
   max-width: 560px;
   margin: auto;
+
+  a {
+    color: #222;
+  }
 `;
 
 const SectionArticle = styled.article`
@@ -227,9 +231,16 @@ const Header = ({ key }) => {
                     <SmallP>
                       The past three years I have been working as a creative
                       frontend developer. You can check most of this works in
-                      this webpage. I also created the @creativedvloper account
-                      where I post mostly creative coding sketches born out of
-                      curiosity.(Links coming soon.)
+                      this webpage. I also created the{" "}
+                      <a
+                        href="https://www.instagram.com/creativedvloper/"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        @creativedvloper
+                      </a>{" "}
+                      account where I post mostly creative coding sketches born
+                      out of curiosity.
                     </SmallP>
                   </SectionArticle>
 
