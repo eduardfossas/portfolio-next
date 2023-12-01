@@ -17,6 +17,11 @@ const Nav = styled.nav`
   justify-content: space-between;
   width: 100%;
   font-size: 14px;
+  background: white;
+  padding: 12px 24px;
+  border-radius: 9999px;
+  box-shadow: 0px 0px 5.3px rgba(0, 0, 0, 0.028),
+    0px 0px 17.9px rgba(0, 0, 0, 0.042), 0px 0px 80px rgba(0, 0, 0, 0.07);
 
   ${mediaQueries.m} {
     font-size: 16px;
@@ -123,7 +128,7 @@ const Close = styled(motion.div)`
   right: 6px;
   z-index: 11;
   font-size: 32px;
-  font-weight: 300;
+  font-weight: 200;
   background-color: white;
   border: 1px solid black;
   line-height: 1;
@@ -134,6 +139,7 @@ const Close = styled(motion.div)`
   text-align: center;
   display: flex;
   align-items: center;
+  justify-content: center;
 
   ${mediaQueries.m} {
     display: none;
@@ -261,8 +267,15 @@ const Header = ({ key }) => {
                       learning creative development libraries like Three.js,
                       Openframeworks or P5.js. I created my own WebGPU rendering
                       engine to get knowledge about how computer graphics work.
-                      You can check it in this github repository. (Links coming
-                      soon.)
+                      You can check it in this{" "}
+                      <a
+                        href="https://github.com/eduardfossas/webgpu-renderer"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        github repository
+                      </a>
+                      .
                     </SmallP>
                   </SectionArticle>
 

@@ -30,7 +30,7 @@ const ExtLink = styled.a`
   span {
     display: inline-block;
     position: relative;
-    transform: translateY(2px);
+    transform: translateY(0);
   }
 
   &:hover {
