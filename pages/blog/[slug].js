@@ -66,14 +66,14 @@ const Cases = ({ title }) => {
             <h2>The worst prologue ever written</h2>
             <p>
               I remember the other day thinking about the past. Being born in
-              the 90s was, let's say, interesting.
+              the 90s was, let&apos;s say, interesting.
             </p>
             <p>
               Let me explain; Childhood was beautiful, I was in the middle of
               analog and technological worlds. I remember playing a football
               match during break time and playing Ocarina of Time after school,
-              or watching The Matrix in the school's fine arts room with all our
-              drawings hanging on the walls.
+              or watching The Matrix in the school&apos;s fine arts room with
+              all our drawings hanging on the walls.
             </p>
             <p>
               Then, years passed, and at only 11 years of age, I was shocked by
