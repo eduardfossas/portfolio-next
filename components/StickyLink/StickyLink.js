@@ -21,9 +21,11 @@ const ExtLink = styled.a`
   bottom: 1rem;
   right: 1rem;
   background: #fff;
-  border: 1px solid #222;
+  border: none;
   padding: 10px 20px;
   border-radius: 9999px;
+  box-shadow: 0px 0px 5.3px rgba(0, 0, 0, 0.028),
+    0px 0px 17.9px rgba(0, 0, 0, 0.042), 0px 0px 80px rgba(0, 0, 0, 0.07);
   transition: background 300ms cubic-bezier(0.87, 0, 0.13, 1),
     color 300ms cubic-bezier(0.87, 0, 0.13, 1);
 
