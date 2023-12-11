@@ -188,14 +188,11 @@ const Header = ({ key }) => {
                 <section>
                   <Title>About Eduard Fossas</Title>
                   <Paragraph>
-                    I am a humanist with multiple interests. Born in the
-                    beautiful city of Barcelona, and although I have lived in
-                    many cities, finally decided to settle in the one with the
-                    best weather: Amsterdam. Husband and father of two, my days
-                    are neither boring nor cold.
-                  </Paragraph>
-                  <Paragraph>
-                    We all love sections for you to learn more about me:
+                    A humanist with multiple interests. Born in the beautiful
+                    city of Barcelona, and although I have lived in many cities,
+                    finally decided to settle in the one with the best weather:
+                    Amsterdam. Husband and father of two, my days are neither
+                    boring nor cold.
                   </Paragraph>
                 </section>
 
