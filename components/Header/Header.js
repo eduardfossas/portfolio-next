@@ -188,16 +188,14 @@ const Header = ({ key }) => {
                 <section>
                   <Title>About Eduard Fossas</Title>
                   <Paragraph>
-                    I am Eduard Fossas, a Renaissance man trapped in the 21st
-                    century. I was born in the beautiful city of Barcelona, and
-                    although I have lived in many cities, I finally decided to
-                    settle in the one with the best weather: Amsterdam. Husband
-                    and father of two, my days are neither boring nor cold.
+                    I am a humanist with multiple interests. Born in the
+                    beautiful city of Barcelona, and although I have lived in
+                    many cities, finally decided to settle in the one with the
+                    best weather: Amsterdam. Husband and father of two, my days
+                    are neither boring nor cold.
                   </Paragraph>
                   <Paragraph>
-                    To not fill you with boredom, I have created the following
-                    sections for you to learn more about me: what I have done,
-                    what I am doing, and what I plan to do.
+                    We all love sections for you to learn more about me:
                   </Paragraph>
                 </section>
 
@@ -206,10 +204,8 @@ const Header = ({ key }) => {
                   <SectionArticle>
                     <SmallTitle>Printing and Prepress</SmallTitle>
                     <SmallP>
-                      That was my first profession and where my journey started.
-                      I absolutely loved it and I have real nostalgia about
-                      those days, long live to the analog world. You can check
-                      my printed works here: (Links coming soon.)
+                      We all love a well bind, printed book, so do I, and that
+                      is exactly why this was my first profession.
                     </SmallP>
                   </SectionArticle>
 
@@ -226,37 +222,28 @@ const Header = ({ key }) => {
                   <SectionArticle>
                     <SmallTitle>Frontend Development</SmallTitle>
                     <SmallP>
-                      I am a self taught Frontend Developer and I have been
-                      working as one for almost a decade. You can check my
-                      recent works in this page.
+                      Do you know what jQuery is? And Dreamweaver? What about
+                      old-plain HTML tables and CSS?
                     </SmallP>
                   </SectionArticle>
 
                   <SectionArticle>
                     <SmallTitle>Creative Development</SmallTitle>
                     <SmallP>
-                      The past three years I have been working as a creative
-                      frontend developer. You can check most of this works in
-                      this webpage. I also created the{" "}
+                      Do you like books? Do you like movies? Do you like video
+                      games? Do you like Math? and design? what about animation?
+                      I certainly do too, that is why the past three years I
+                      have been working as a creative frontend developer. I also
+                      created the{" "}
                       <a
                         href="https://www.instagram.com/creativedvloper/"
                         target="_blank"
                         rel="noreferrer"
                       >
                         @creativedvloper
-                      </a>{" "}
+                      </a>
                       account where I post mostly creative coding sketches born
                       out of curiosity.
-                    </SmallP>
-                  </SectionArticle>
-
-                  <SectionArticle>
-                    <SmallTitle>Writing</SmallTitle>
-                    <SmallP>
-                      Writing has always been a joy of mine but never publicly.
-                      I decided to start my own blog this year where I write
-                      about everything. You can read it here. (Links coming
-                      soon.)
                     </SmallP>
                   </SectionArticle>
 
@@ -276,16 +263,6 @@ const Header = ({ key }) => {
                         github repository
                       </a>
                       .
-                    </SmallP>
-                  </SectionArticle>
-
-                  <SectionArticle>
-                    <SmallTitle>Ilustration</SmallTitle>
-                    <SmallP>
-                      I have a background in painting and drawing. What I always
-                      enjoyed the most was sketching and drawing ideas. You can
-                      check some of my current Ilustrations in my blog. (Links
-                      coming soon.)
                     </SmallP>
                   </SectionArticle>
                 </CategorySections>
