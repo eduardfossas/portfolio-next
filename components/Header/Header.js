@@ -201,8 +201,8 @@ const Header = ({ key }) => {
                   <SectionArticle>
                     <SmallTitle>Printing and Prepress</SmallTitle>
                     <SmallP>
-                      We all love a well bind, printed book, so do I, and that
-                      is exactly why this was my first profession.
+                      We all love a well bind, printed book, and so do I, and
+                      that is exactly why this was my first profession.
                     </SmallP>
                   </SectionArticle>
 
