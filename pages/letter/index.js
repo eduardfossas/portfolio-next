@@ -4,8 +4,7 @@ import Head from "next/head";
 import { Canvas } from "@/components/Three/Canvas";
 import { Visual } from "@/components/Three/Visual";
 import { useRef } from "react";
-import { Environment, Text, View } from "@react-three/drei";
-import { MeshBasicMaterial, MeshPhysicalMaterial, Vector3 } from "three";
+import { View } from "@react-three/drei";
 import { VideoPlayer } from "@/components/VideoPlayer/VideoPlayer";
 import Image from "next/image";
 
