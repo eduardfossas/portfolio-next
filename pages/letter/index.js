@@ -172,8 +172,8 @@ export default function Home({}) {
             <p>
               One skill that I always wanted to learn since I was a kid was 3D.
               Funny enough, it was not until 4 years ago that I started
-              self-studying computer graphics. I am mentioning this because,
-              meanwhile, I was learning, I decided to release my WebGPU engine,
+              self-studying computer graphics. I am mentioning this because
+              meanwhile I was learning, I decided to release my WebGPU engine,
               and I participated actively in the Lygia GLSL library.
               <br /> I am aware that this might be quite off-topic for CSS...Or
               maybe not? Did someone say CSS 3D transforms?
@@ -190,11 +190,11 @@ export default function Home({}) {
             <p>
               Last but not least, one of the main reasons I am applying for this
               role is the ability to teach others. As a Lead Developer in a
-              digital agency, time is very limited to explain and brief
-              developers so they can understand complex topics, and I do not
-              think it is fair at all, neither for them nor for me. You need
-              time to teach others, and this time is more valuable than the time
-              spent producing the product.
+              digital agency, time is very so it is hard to explain and brief
+              developers complex topics. I do not think it is fair at all,
+              neither for them nor for me. You need time to teach others, and
+              this time is more valuable than the time spent producing the
+              product.
             </p>
             <p className="mt-10">
               Sincerely,

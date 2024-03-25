@@ -25,6 +25,7 @@ const ScrollProvider = ({ children, isStop }) => {
   useEffect(() => {
     scroll.current = new Lenis({
       smoothWheel: true,
+      syncTouch: true,
       // lerp: 0.09,
     });
 

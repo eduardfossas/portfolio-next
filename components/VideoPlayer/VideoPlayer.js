@@ -74,7 +74,7 @@ const VideoPlayer = ({ video }) => {
 
   return (
     <div className="relative overflow-hidden w-full">
-      <video src={video} muted={true} playsInline loop ref={videoRef} />
+      <video src={video} muted={true} playsInline loop ref={videoRef} preload />
 
       <div
         className="absolute w-full h-full inset-0 cursor-pointer"
