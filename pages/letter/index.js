@@ -104,7 +104,9 @@ export default function Home({}) {
                   alt="Screnshot of a magazine"
                   layout="fill"
                   objectFit="contain"
-                  sizes="(max-width: 768px) 100vw, 33vw"
+                  quality={100}
+                  sizes="100vw"
+                  priority
                 />
               </picture>
 
