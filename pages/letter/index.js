@@ -43,7 +43,10 @@ export default function Home({}) {
           ></path>
         </symbol>
       </svg>
-      <main ref={containerRef} className="mx-auto max-w-4xl py-20 px-5">
+      <main
+        ref={containerRef}
+        className="mx-auto max-w-4xl py-10 md:py-20 px-5"
+      >
         <article className="md:flex text-slate-800">
           <header className="sticky top-0 flex-1 shrink-0 basis-1/3.75 mb-5 md:mb-0">
             <h2 className="text-2xl font-semibold leading-none mb-0.5">
@@ -53,7 +56,7 @@ export default function Home({}) {
             <p className="mb-5">
               <a href="mailto:eduardfp@gmail.com" className="flex items-center">
                 <span>
-                  <svg className="w-4 h-4 fill-indigo-500 mr-1">
+                  <svg className="w-4 h-4 fill-indigo-600 mr-1">
                     <use xlinkHref="#lnr-envelope"></use>
                   </svg>
                 </span>
@@ -62,7 +65,7 @@ export default function Home({}) {
 
               <a href="tel:+310682341904" className="flex items-center">
                 <span>
-                  <svg className="w-4 h-3.5 fill-indigo-500 mr-1">
+                  <svg className="w-4 h-3.5 fill-indigo-600 mr-1">
                     <use xlinkHref="#lnr-phone-handset"></use>
                   </svg>
                 </span>
@@ -135,7 +138,7 @@ export default function Home({}) {
               <figcaption className="text-slate-500 mt-1 text-sm">
                 Video of Foam Talent 2021 website. You can see it live{" "}
                 <a
-                  className="underline hover:underline-none inline-flex items-center"
+                  className="underline hover:no-underline inline-flex items-center"
                   href="https://talent2021.foam.org/"
                   rel="noreferrer"
                   target="_blank"
@@ -150,7 +153,10 @@ export default function Home({}) {
               </figcaption>
             </figure>
             <p>There are five things that really excite me about this role:</p>
-            <ul role="list" className="list-disc pl-5 space-y-3 mb-7">
+            <ul
+              role="list"
+              className="list-disc pl-5 space-y-3 mb-7 marker:text-indigo-600"
+            >
               <li>
                 Being part of a team where individuals have many skills and
                 where I could take on a variety of responsibilities.
