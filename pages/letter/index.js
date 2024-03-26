@@ -190,8 +190,8 @@ export default function Home({}) {
             <p>
               Last but not least, one of the main reasons I am applying for this
               role is the ability to teach others. As a Lead Developer in a
-              digital agency, time is very so it is hard to explain and brief
-              developers complex topics. I do not think it is fair at all,
+              digital agency, time is very limited, so it is hard to explain and
+              brief developers complex topics. I do not think it is fair at all,
               neither for them nor for me. You need time to teach others, and
               this time is more valuable than the time spent producing the
               product.
