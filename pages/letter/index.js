@@ -48,38 +48,43 @@ export default function Home({}) {
         className="mx-auto max-w-4xl py-10 md:py-20 px-5"
       >
         <article className="md:flex text-slate-800">
-          <header className="sticky top-0 flex-1 shrink-0 basis-1/3.75 mb-5 md:mb-0">
-            <h2 className="text-2xl font-semibold leading-none mb-0.5">
-              Eduard Fossas
-            </h2>
-            <p className="text-sm text-slate-500 mb-5">Wearer Of Many Hats</p>
-            <p className="mb-5">
-              <a href="mailto:eduardfp@gmail.com" className="flex items-center">
-                <span>
-                  <svg className="w-4 h-4 fill-indigo-600 mr-1">
-                    <use xlinkHref="#lnr-envelope"></use>
-                  </svg>
-                </span>
-                eduardfp@gmail.com
-              </a>
+          <header className="flex-1 shrink-0 basis-1/3.75 mb-5 md:mb-0">
+            <div className="md:sticky top-2">
+              <h2 className="text-2xl font-semibold leading-none mb-0.5">
+                Eduard Fossas
+              </h2>
+              <p className="text-sm text-slate-500 mb-5">Wearer Of Many Hats</p>
+              <p className="mb-5">
+                <a
+                  href="mailto:eduardfp@gmail.com"
+                  className="flex items-center"
+                >
+                  <span>
+                    <svg className="w-4 h-4 fill-indigo-600 mr-1">
+                      <use xlinkHref="#lnr-envelope"></use>
+                    </svg>
+                  </span>
+                  eduardfp@gmail.com
+                </a>
 
-              <a href="tel:+310682341904" className="flex items-center">
-                <span>
-                  <svg className="w-4 h-3.5 fill-indigo-600 mr-1">
-                    <use xlinkHref="#lnr-phone-handset"></use>
-                  </svg>
-                </span>
-                +310682341904
-              </a>
-            </p>
-            <p>
-              Hudsonstraat 45,
-              <br />
-              Amsterdam, 1057RX
-              <br />
-              The Netherlands
-              <br />
-            </p>
+                <a href="tel:+310682341904" className="flex items-center">
+                  <span>
+                    <svg className="w-4 h-3.5 fill-indigo-600 mr-1">
+                      <use xlinkHref="#lnr-phone-handset"></use>
+                    </svg>
+                  </span>
+                  +310682341904
+                </a>
+              </p>
+              <p>
+                Hudsonstraat 45,
+                <br />
+                Amsterdam, 1057RX
+                <br />
+                The Netherlands
+                <br />
+              </p>
+            </div>
           </header>
           <section className="c-text">
             <p>
