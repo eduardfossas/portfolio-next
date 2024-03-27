@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useRef, useEffect, useState } from "react";
 
-const VideoPlayer = ({ video }) => {
+const VideoPlayer = ({ video, color = "indigo-600" }) => {
   const videoRef = useRef(null);
   const [play, setPlay] = useState(false);
   const [initialPlay, setInitialPlay] = useState(false);
@@ -86,7 +86,7 @@ const VideoPlayer = ({ video }) => {
         ref={timelineRef}
       >
         <div
-          className="h-1 bg-indigo-600 w-full absolute bottom-0 origin-left scale-x-0"
+          className={`h-1 bg-${color} w-full absolute bottom-0 origin-left scale-x-0`}
           ref={timelineInnerRef}
         />
       </div>

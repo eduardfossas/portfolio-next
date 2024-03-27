@@ -65,7 +65,7 @@ const Chooser = ({ slug }) => {
       </motion.div>
 
       <div
-        className="px-3 py-1 border-1 font-bold rounded-full cursor-pointer bg-white"
+        className="px-3 py-1 select-none border-1 font-bold rounded-full cursor-pointer bg-white"
         onClick={() => toggleOpen()}
       >
         Choose Style

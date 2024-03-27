@@ -26,7 +26,7 @@ const Test = () => {
   return (
     <motion.section
       ref={ref}
-      className="h-screen p-5 md:p-10 md:pr-0 mb-10 md:mb-20 origin-bottom"
+      className="h-svh p-5 md:p-10 md:pr-0 mb-10 md:mb-20 origin-bottom"
     >
       <motion.svg
         className="w-full h-full"
@@ -164,6 +164,7 @@ export default function Home({}) {
                 video={
                   "https://a.storyblok.com/f/167748/x/8c320c79ab/foam-talent-awwwards-01.mp4"
                 }
+                color="red-500"
               />
               <figcaption className="mt-1 leading-tight text-lg">
                 Video of Foam Talent 2021 website. You can see it live{" "}
@@ -199,15 +200,15 @@ export default function Home({}) {
                   Being part of a team where individuals have many skills and
                   where I could take on a variety of responsibilities.
                 </li>
-                <li className="border-b-3 pb-5">
+                <li className="border-b-3 mt-3 pb-5">
                   Helping people understand simple and/or complex topics through
                   design and CSS.
                 </li>
-                <li className="border-b-3 pb-5">
+                <li className="border-b-3 mt-3 pb-5">
                   Designing and building templates, interactive experiences, and
                   sites using Tailwind to showcase the power of the product.
                 </li>
-                <li className="border-b-3 pb-5">
+                <li className="border-b-3 mt-3 pb-5">
                   Working with animation APIs as well as CSS animations like
                   GSAP, Framer Motion, or CSS scroll-driven animations.
                 </li>
