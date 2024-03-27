@@ -38,7 +38,7 @@ const Cases = ({
         <title>{`Eduard Fossas | ${title}`}</title>
       </Head>
       <Header />
-      <main>
+      <main className="c-main">
         <motion.div animate={contentAnimation}>
           <Hero image={hero} title={title} client={client} />
 

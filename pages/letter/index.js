@@ -7,6 +7,7 @@ import { useRef } from "react";
 import { View } from "@react-three/drei";
 import { VideoPlayer } from "@/components/VideoPlayer/VideoPlayer";
 import Image from "next/image";
+import { Chooser } from "@/components/Chooser";
 
 export default function Home({}) {
   const containerRef = useRef();
@@ -67,7 +68,10 @@ export default function Home({}) {
                   eduardfp@gmail.com
                 </a>
 
-                <a href="tel:+310682341904" className="flex items-center">
+                <a
+                  href="tel:+310682341904"
+                  className="flex items-center oldstyle-nums"
+                >
                   <span>
                     <svg className="w-4 h-3.5 fill-indigo-600 mr-1">
                       <use xlinkHref="#lnr-phone-handset"></use>
@@ -114,7 +118,7 @@ export default function Home({}) {
                   objectFit="contain"
                   quality={100}
                   sizes="100vw"
-                  priority
+                  preload="true"
                 />
               </picture>
 
@@ -190,7 +194,7 @@ export default function Home({}) {
               maybe not? Did someone say CSS 3D transforms?
             </p>
             <figure className="mb-5">
-              <View style={{ width: "100%", height: 300 }}>
+              <View className="w-full h-96">
                 <Visual />
               </View>
               <figcaption className="text-slate-500 mt-1 text-sm">
@@ -213,6 +217,7 @@ export default function Home({}) {
             </p>
           </section>
         </article>
+        <Chooser slug="/letter" />
       </main>
       <Canvas containerRef={containerRef} />
     </>

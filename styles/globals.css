@@ -19,6 +19,10 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+.c-main {
+  overflow: hidden;
+}
+
 ::selection {
   color: #333;
   background: #f1f1f1;
