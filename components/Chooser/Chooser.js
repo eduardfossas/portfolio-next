@@ -50,7 +50,7 @@ const Chooser = ({ slug }) => {
           }`}
           variants={variants}
         >
-          <Link href="/letter">Bussiness Style</Link>
+          <Link href="/letter">Business</Link>
         </motion.div>
         <motion.div
           initial={{ opacity: 0 }}
@@ -60,7 +60,7 @@ const Chooser = ({ slug }) => {
           }`}
           variants={variants}
         >
-          <Link href="/letter-modern">Modern Style (WIP)</Link>
+          <Link href="/letter-modern">Modern (WIP)</Link>
         </motion.div>
       </motion.div>
 
