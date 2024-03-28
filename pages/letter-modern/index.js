@@ -170,9 +170,9 @@ export default function Home({}) {
         <section ref={ref} className="h-[200vh] bg-white">
           <motion.article
             style={{ opacity: scrollYProgress }}
-            className="text-2xl md:text-3xl 2xl:text-5xl 2xl:leading-tight h-screen flex items-center justify-center md:grid grid-cols-12 gap-10 sticky top-0"
+            className="text-2xl md:text-3xl 2xl:text-5xl h-screen flex items-center justify-center md:grid grid-cols-12 gap-10 sticky top-0"
           >
-            <p className="px-5 md:p-0 col-span-full md:col-start-3 md:col-span-8 md:text-center">
+            <p className="px-5 2xl:leading-[3.5rem] md:p-0 col-span-full md:col-start-3 md:col-span-8 md:text-center">
               As an example, I would like to speak about Foam Talent 2021, a
               project that brought together all of my skills and of which I am
               very proud. It was a collaborative effort involving design,
@@ -214,7 +214,13 @@ export default function Home({}) {
         </section>
         <section className="p-5 md:p-10 2xl:p-20 md:mt-20 md:mb-20">
           <article className="grid grid-cols-12 gap-y-5 md:gap-10 text-2xl md:text-3xl 2xl:text-4xl">
-            <div className="md:border-b-3 col-span-full"></div>
+            <motion.div
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.7 }}
+              className="md:border-b-3 col-span-full origin-left"
+            ></motion.div>
             <p className="border-b-3 pb-20 col-span-full md:col-start-1 md:col-span-6 md:border-none md:pb-0 md:whitespace-break-spaces">
               There are five things that {"\n"}really excite me about this role:
             </p>
@@ -223,22 +229,51 @@ export default function Home({}) {
                 role="list"
                 className="list-none space-y-3 mb-7 marker:text-indigo-600"
               >
-                <li className="border-b-3 pb-5">
+                <li className="pb-5">
                   Being part of a team where individuals have many skills and
                   where I could take on a variety of responsibilities.
                 </li>
-                <li className="border-b-3 mt-3 pb-5">
+                <motion.div
+                  initial={{ scaleX: 0 }}
+                  whileInView={{ scaleX: 1 }}
+                  viewport={{ once: false }}
+                  transition={{ duration: 0.7 }}
+                  className="md:border-b-3 mt-0 col-span-full origin-left"
+                ></motion.div>
+
+                <li className="mt-3 pb-5">
                   Helping people understand simple and/or complex topics through
                   design and CSS.
                 </li>
-                <li className="border-b-3 mt-3 pb-5">
+                <motion.div
+                  initial={{ scaleX: 0 }}
+                  whileInView={{ scaleX: 1 }}
+                  viewport={{ once: false }}
+                  transition={{ duration: 0.7 }}
+                  className="md:border-b-3 mt-0 col-span-full origin-left"
+                ></motion.div>
+                <li className="mt-3 pb-5">
                   Designing and building templates, interactive experiences, and
                   sites using Tailwind to showcase the power of the product.
                 </li>
-                <li className="border-b-3 mt-3 pb-5">
+                <motion.div
+                  initial={{ scaleX: 0 }}
+                  whileInView={{ scaleX: 1 }}
+                  viewport={{ once: false }}
+                  transition={{ duration: 0.7 }}
+                  className="md:border-b-3 mt-0 col-span-full origin-left"
+                ></motion.div>
+                <li className="mt-3 pb-5">
                   Working with animation APIs as well as CSS animations like
                   GSAP, Framer Motion, or CSS scroll-driven animations.
                 </li>
+                <motion.div
+                  initial={{ scaleX: 0 }}
+                  whileInView={{ scaleX: 1 }}
+                  viewport={{ once: false }}
+                  transition={{ duration: 0.7 }}
+                  className="md:border-b-3 mt-0 col-span-full origin-left"
+                ></motion.div>
                 <li>I love to learn new skills and tools.</li>
               </ul>
             </div>
