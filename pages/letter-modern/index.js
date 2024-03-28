@@ -1,13 +1,35 @@
 import Head from "next/head";
 import { Canvas } from "@/components/Three/Canvas";
-import { Visual } from "@/components/Three/Visual";
-import { useContext, useEffect, useRef } from "react";
-import { Text, View } from "@react-three/drei";
+import { TextVisual } from "@/components/Three/TextVisual";
+import { useContext, useRef } from "react";
+import { View } from "@react-three/drei";
 import { VideoPlayer } from "@/components/VideoPlayer/VideoPlayer";
 import Image from "next/image";
 import { ScrollContext } from "context";
-import { motion, useAnimation, transform, useScroll } from "framer-motion";
+import { motion, transform, useScroll, useTransform } from "framer-motion";
 import { Chooser } from "@/components/Chooser";
+
+const Gradient = ({ containerRef, color = "from-red-500" }) => {
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["end end", "start center"],
+  });
+
+  const backgroundColor = useTransform(
+    scrollYProgress,
+    [1, 0],
+    ["100%", "-100%"]
+  );
+
+  return (
+    <motion.div
+      style={{
+        "--tw-gradient-from-position": backgroundColor,
+      }}
+      className={`absolute h-full w-full left-0 bg-gradient-to-t ${color} from-100%`}
+    ></motion.div>
+  );
+};
 
 const Test = () => {
   const ref = useRef(null);
@@ -63,11 +85,13 @@ const Test = () => {
 
 export default function Home({}) {
   const containerRef = useRef();
+  const firstSectionRef = useRef(null);
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["end end", "start start"],
   });
+
   return (
     <>
       <Head>
@@ -104,7 +128,10 @@ export default function Home({}) {
       <main ref={containerRef} className="w-full bg-red-500 min-h-screen">
         <Test />
         <section className="mb-10 md:mb-40 p-5 2xl:p-20">
-          <article className="grid grid-cols-12 md:gap-10  text-2xl md:text-3xl 2xl:text-4xl">
+          <article
+            ref={firstSectionRef}
+            className="grid grid-cols-12 md:gap-10  text-2xl md:text-3xl 2xl:text-4xl"
+          >
             <figure className="col-span-full mb-10 md:col-start-4 md:col-span-6 md:mb-10">
               <picture className="relative w-full ar-14-9 block">
                 <Image
@@ -159,7 +186,7 @@ export default function Home({}) {
           </motion.article>
 
           <div className="h-screen flex items-center justify-center">
-            <figure className="w-fit m-auto px-10">
+            <figure className="w-fit px-5 m-auto md:px-10">
               <VideoPlayer
                 video={
                   "https://a.storyblok.com/f/167748/x/8c320c79ab/foam-talent-awwwards-01.mp4"
@@ -185,7 +212,7 @@ export default function Home({}) {
             </figure>
           </div>
         </section>
-        <section className="p-10 2xl:p-20 md:mt-20 md:mb-20">
+        <section className="p-5 md:p-10 2xl:p-20 md:mt-20 md:mb-20">
           <article className="grid grid-cols-12 gap-y-5 md:gap-10 text-2xl md:text-3xl 2xl:text-4xl">
             <div className="md:border-b-3 col-span-full"></div>
             <p className="border-b-3 pb-20 col-span-full md:col-start-1 md:col-span-6 md:border-none md:pb-0 md:whitespace-break-spaces">
@@ -218,7 +245,7 @@ export default function Home({}) {
           </article>
         </section>
         <section className="bg-white md:h-full md:flex">
-          <article className="basis-1/2 p-10 2xl:p-20">
+          <article className="basis-1/2 p-5 md:p-10 2xl:p-20">
             <p className="text-2xl md:text-3xl 2xl:text-4xl">
               One skill that I always wanted to learn since I was a kid was 3D.
               Funny enough, it was not until 4 years ago that I started
@@ -229,8 +256,20 @@ export default function Home({}) {
               someone say CSS 3D transforms?
             </p>
           </article>
-          <View className="basis-1/2 md:h-screen p-10 2xl:p-20"></View>
+          <View className="basis-1/2 h-[30rem] md:h-screen p-10 2xl:p-20">
+            <TextVisual />
+          </View>
         </section>
+        {/* <section className="p-5 md:p-10 md:pb-20 2xl:p-20 2xl:pb-40">
+          <p className="text-2xl md:text-3xl 2xl:text-4xl">
+            Last but not least, one of the main reasons I am applying for this
+            role is the ability to teach others. As a Lead Developer in a
+            digital agency, time is very limited, so it is hard to explain and
+            brief developers complex topics. I do not think it is fair at all,
+            neither for them nor for me. You need time to teach others, and this
+            time is more valuable than the time spent producing the product.
+          </p>
+        </section> */}
         <Chooser slug="/letter-modern" />
       </main>
       <Canvas containerRef={containerRef} />

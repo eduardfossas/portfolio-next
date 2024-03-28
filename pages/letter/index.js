@@ -194,7 +194,7 @@ export default function Home({}) {
               maybe not? Did someone say CSS 3D transforms?
             </p>
             <figure className="mb-5">
-              <View className="w-full h-96">
+              <View className="w-full h-64 md:h-96">
                 <Visual />
               </View>
               <figcaption className="text-slate-500 mt-1 text-sm">
