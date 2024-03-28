@@ -17,6 +17,7 @@ const Canvas = ({ containerRef }) => {
     >
       <View.Port />
       {/* <OrthographicCamera makeDefault zoom={7} /> */}
+      <Preload all />
     </R3FCanvas>
   );
 };

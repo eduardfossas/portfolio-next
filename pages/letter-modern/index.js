@@ -217,7 +217,7 @@ export default function Home({}) {
             <motion.div
               initial={{ scaleX: 0 }}
               whileInView={{ scaleX: 1 }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               transition={{ duration: 0.7 }}
               className="md:border-b-3 col-span-full origin-left"
             ></motion.div>
@@ -236,7 +236,7 @@ export default function Home({}) {
                 <motion.div
                   initial={{ scaleX: 0 }}
                   whileInView={{ scaleX: 1 }}
-                  viewport={{ once: false }}
+                  viewport={{ once: true }}
                   transition={{ duration: 0.7 }}
                   className="md:border-b-3 mt-0 col-span-full origin-left"
                 ></motion.div>
@@ -248,7 +248,7 @@ export default function Home({}) {
                 <motion.div
                   initial={{ scaleX: 0 }}
                   whileInView={{ scaleX: 1 }}
-                  viewport={{ once: false }}
+                  viewport={{ once: true }}
                   transition={{ duration: 0.7 }}
                   className="md:border-b-3 mt-0 col-span-full origin-left"
                 ></motion.div>
@@ -259,7 +259,7 @@ export default function Home({}) {
                 <motion.div
                   initial={{ scaleX: 0 }}
                   whileInView={{ scaleX: 1 }}
-                  viewport={{ once: false }}
+                  viewport={{ once: true }}
                   transition={{ duration: 0.7 }}
                   className="md:border-b-3 mt-0 col-span-full origin-left"
                 ></motion.div>
@@ -270,7 +270,7 @@ export default function Home({}) {
                 <motion.div
                   initial={{ scaleX: 0 }}
                   whileInView={{ scaleX: 1 }}
-                  viewport={{ once: false }}
+                  viewport={{ once: true }}
                   transition={{ duration: 0.7 }}
                   className="md:border-b-3 mt-0 col-span-full origin-left"
                 ></motion.div>
