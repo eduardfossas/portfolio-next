@@ -12,21 +12,15 @@ import { Chooser } from "@/components/Chooser";
 const Gradient = ({ containerRef, color = "from-red-500" }) => {
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["end end", "start center"],
+    offset: ["center", "0% end"],
   });
 
-  const backgroundColor = useTransform(
-    scrollYProgress,
-    [1, 0],
-    ["100%", "-100%"]
-  );
+  const backgroundColor = useTransform(scrollYProgress, [1, 0], ["0%", "100%"]);
 
   return (
     <motion.div
-      style={{
-        "--tw-gradient-from-position": backgroundColor,
-      }}
-      className={`absolute h-full w-full left-0 bg-gradient-to-t ${color} from-100%`}
+      style={{ y: backgroundColor }}
+      className={`absolute w-full h-[150%] -top-[50%] bg-gradient-to-t ${color} from-80%`}
     ></motion.div>
   );
 };
@@ -86,6 +80,7 @@ const Test = () => {
 export default function Home({}) {
   const containerRef = useRef();
   const firstSectionRef = useRef(null);
+  const thirdSectionRef = useRef(null);
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -128,42 +123,53 @@ export default function Home({}) {
       <main ref={containerRef} className="w-full bg-red-500 min-h-screen">
         <Test />
         <section className="mb-10 md:mb-40 p-5 2xl:p-20">
-          <article
-            ref={firstSectionRef}
-            className="grid grid-cols-12 md:gap-10  text-2xl md:text-3xl 2xl:text-4xl"
-          >
-            <figure className="col-span-full mb-10 md:col-start-4 md:col-span-6 md:mb-10">
-              <picture className="relative w-full ar-14-9 block">
-                <Image
-                  src="https://a.storyblok.com/f/167748/940x603/3e62e38c75/icaria-magazine.jpg"
-                  alt="Screnshot of a magazine"
-                  layout="fill"
-                  objectFit="contain"
-                  quality={100}
-                  sizes="100vw"
-                  preload="true"
-                />
-              </picture>
+          <article className="text-2xl relative md:text-3xl 2xl:text-4xl">
+            <div className="grid grid-cols-12 md:gap-10 mb-10">
+              <motion.figure
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+                className="col-span-full md:col-start-4 md:col-span-6 md:mb-10"
+              >
+                <picture className="relative w-full ar-14-9 block">
+                  <Image
+                    src="https://a.storyblok.com/f/167748/940x603/3e62e38c75/icaria-magazine.jpg"
+                    alt="Screnshot of a magazine"
+                    layout="fill"
+                    objectFit="contain"
+                    quality={100}
+                    sizes="100vw"
+                    preload="true"
+                  />
+                </picture>
 
-              <figcaption className="mt-1 leading-tight text-lg">
-                Icaria Magazine was one of the first professional projects I
-                worked on as a Graphic Designer.
-              </figcaption>
-            </figure>
-            <p className="col-span-full md:col-start-1 md:col-span-6">
-              Dear Tailwind Labs Team.
-              <br />I am writing to you to express my interest in the Design
-              Engineer position. I am convinced this is a one-life-time
-              opportunity to be part of a team that is pushing the boundaries of
-              the world wide web and bring communities together.
-            </p>
-            <p className="col-span-full md:col-start-7 md:col-span-7">
-              My ten years of experience in web technologies could be of
-              interest to the team, as I have acquired many skills in all phases
-              of web development. I am confident that I can contribute to the
-              growth of Tailwind. Furthermore, my background in Printing and
-              Graphic Design could be very advantageous for the team.
-            </p>
+                <figcaption className="mt-1 leading-tight text-lg">
+                  Icaria Magazine was one of the first professional projects I
+                  worked on as a Graphic Designer.
+                </figcaption>
+              </motion.figure>
+            </div>
+            <div
+              ref={firstSectionRef}
+              className="grid grid-cols-12 md:gap-10 overflow-hidden relative"
+            >
+              <p className="col-span-full md:col-start-1 md:col-span-6">
+                Dear Tailwind Labs Team.
+                <br />I am writing to you to express my interest in the Design
+                Engineer position. I am convinced this is a one-life-time
+                opportunity to be part of a team that is pushing the boundaries
+                of the world wide web and bring communities together.
+              </p>
+              <p className="col-span-full md:col-start-7 md:col-span-7">
+                My ten years of experience in web technologies could be of
+                interest to the team, as I have acquired many skills in all
+                phases of web development. I am confident that I can contribute
+                to the growth of Tailwind. Furthermore, my background in
+                Printing and Graphic Design could be very advantageous for the
+                team.
+              </p>
+              <Gradient containerRef={firstSectionRef} />
+            </div>
           </article>
         </section>
 
@@ -172,7 +178,12 @@ export default function Home({}) {
             style={{ opacity: scrollYProgress }}
             className="text-2xl md:text-3xl 2xl:text-5xl h-screen flex items-center justify-center md:grid grid-cols-12 gap-10 sticky top-0"
           >
-            <p className="px-5 2xl:leading-[3.5rem] md:p-0 col-span-full md:col-start-3 md:col-span-8 md:text-center">
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
+              className="px-5 2xl:leading-[3.5rem] md:p-0 col-span-full md:col-start-3 md:col-span-8 md:text-center"
+            >
               As an example, I would like to speak about Foam Talent 2021, a
               project that brought together all of my skills and of which I am
               very proud. It was a collaborative effort involving design,
@@ -182,7 +193,7 @@ export default function Home({}) {
               brings me the greatest joy is the fact that I enjoyed every day,
               every hour, every minute of the project because I already knew how
               special it was.
-            </p>
+            </motion.p>
           </motion.article>
 
           <div className="h-screen flex items-center justify-center">
@@ -238,7 +249,7 @@ export default function Home({}) {
                   whileInView={{ scaleX: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.7 }}
-                  className="md:border-b-3 mt-0 col-span-full origin-left"
+                  className="border-b-3 mt-0 col-span-full origin-left"
                 ></motion.div>
 
                 <li className="mt-3 pb-5">
@@ -250,7 +261,7 @@ export default function Home({}) {
                   whileInView={{ scaleX: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.7 }}
-                  className="md:border-b-3 mt-0 col-span-full origin-left"
+                  className="border-b-3 mt-0 col-span-full origin-left"
                 ></motion.div>
                 <li className="mt-3 pb-5">
                   Designing and building templates, interactive experiences, and
@@ -261,7 +272,7 @@ export default function Home({}) {
                   whileInView={{ scaleX: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.7 }}
-                  className="md:border-b-3 mt-0 col-span-full origin-left"
+                  className="border-b-3 mt-0 col-span-full origin-left"
                 ></motion.div>
                 <li className="mt-3 pb-5">
                   Working with animation APIs as well as CSS animations like
@@ -272,30 +283,51 @@ export default function Home({}) {
                   whileInView={{ scaleX: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.7 }}
-                  className="md:border-b-3 mt-0 col-span-full origin-left"
+                  className="border-b-3 mt-0 col-span-full origin-left"
                 ></motion.div>
                 <li>I love to learn new skills and tools.</li>
               </ul>
             </div>
           </article>
         </section>
-        <section className="bg-white md:h-full md:flex">
-          <article className="basis-1/2 p-5 md:p-10 2xl:p-20">
-            <p className="text-2xl md:text-3xl 2xl:text-4xl">
-              One skill that I always wanted to learn since I was a kid was 3D.
-              Funny enough, it was not until 4 years ago that I started
-              self-studying computer graphics. I am mentioning this because
-              meanwhile I was learning, I decided to release my WebGPU engine,
-              and I participated actively in the Lygia GLSL library. I am aware
-              that this might be quite off-topic for CSS...Or maybe not? Did
-              someone say CSS 3D transforms?
-            </p>
+        <section className="bg-white p-5 py-10 2xl:p-20 2xl:pb-96">
+          <article className="text-2xl relative md:text-3xl 2xl:text-4xl">
+            <div className="grid grid-cols-12 md:gap-10 mb-10">
+              <figure className="col-span-full md:col-start-4 md:col-span-6 md:mb-10">
+                <View className="relative w-full ar-14-9 block">
+                  <TextVisual />
+                </View>
+
+                <figcaption className="mt-1 leading-tight text-lg">
+                  A bit of fractal brownian motion. Why not?
+                </figcaption>
+              </figure>
+            </div>
+
+            <div
+              ref={thirdSectionRef}
+              className="grid grid-cols-12 md:gap-10 overflow-hidden relative"
+            >
+              <p className="col-span-full md:col-start-1 md:col-span-6">
+                Dear Tailwind Labs Team.
+                <br />I am writing to you to express my interest in the Design
+                Engineer position. I am convinced this is a one-life-time
+                opportunity to be part of a team that is pushing the boundaries
+                of the world wide web and bring communities together.
+              </p>
+              <p className="col-span-full md:col-start-7 md:col-span-7">
+                My ten years of experience in web technologies could be of
+                interest to the team, as I have acquired many skills in all
+                phases of web development. I am confident that I can contribute
+                to the growth of Tailwind. Furthermore, my background in
+                Printing and Graphic Design could be very advantageous for the
+                team.
+              </p>
+              <Gradient containerRef={thirdSectionRef} color="from-white" />
+            </div>
           </article>
-          <View className="basis-1/2 h-[30rem] md:h-screen p-10 2xl:p-20">
-            <TextVisual />
-          </View>
         </section>
-        {/* <section className="p-5 md:p-10 md:pb-20 2xl:p-20 2xl:pb-40">
+        {/* <section className="p-5 md:p-10 md:pb-20 2xl:p-20 2xl:pb-40 h-svh">
           <p className="text-2xl md:text-3xl 2xl:text-4xl">
             Last but not least, one of the main reasons I am applying for this
             role is the ability to teach others. As a Lead Developer in a
