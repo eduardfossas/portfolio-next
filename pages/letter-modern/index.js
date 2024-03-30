@@ -291,20 +291,19 @@ export default function Home({}) {
           </article>
         </section>
         <section className="bg-white p-5 py-10 2xl:p-20 2xl:pb-32">
-          <figure className="mb-5">
-            <View className="w-full h-64 md:h-96">
-              <SphereVisual />
-            </View>
-            <figcaption className="text-slate-500 mt-1 text-sm">
-              Having fun with computer graphics. Cubes inside cubes inside
-              cubes.
-            </figcaption>
-          </figure>
           <article className="text-2xl md:text-3xl 2xl:text-4xl">
-            <div
-              ref={thirdSectionRef}
-              className="grid grid-cols-12 md:gap-10 overflow-hidden"
-            >
+            <div className="grid grid-cols-12 md:gap-10 mb-10">
+              <figure className="mb-5 col-span-full md:col-start-4 md:col-span-6 md:mb-10">
+                <View className="w-full aspect-square md:aspect-video">
+                  <SphereVisual />
+                </View>
+                <figcaption className="mt-1 leading-tight text-lg text-center">
+                  Having fun with computer graphics. Cubes inside cubes inside
+                  cubes.
+                </figcaption>
+              </figure>
+            </div>
+            <div className="grid grid-cols-12 md:gap-10">
               <p className="col-span-full md:col-start-1 md:col-span-6 tracking-[-0.005em]">
                 One skill that I always wanted to learn since I was a kid was
                 3D. Funny enough, it was not until 4 years ago that I started

@@ -324,7 +324,7 @@ const SphereVisual = () => {
   const displacement = useRef(0);
 
   useFrame(({ clock }) => {
-    mesh.current.uTime += 0.01;
+    mesh.current.uTime = clock.getElapsedTime();
     mesh.current.uDisplacementStrength = MathUtils.lerp(
       mesh.current.uDisplacementStrength,
       displacement.current,
