@@ -7,7 +7,7 @@ const PlateMat = shaderMaterial(
   {
     uColor: new Color(null),
     uTexture: null,
-    uTime: null,
+    uTime: 0,
     uDistortionFrequency: 0.1,
     uDistortionStrength: 0.1,
     uDisplacementFrequency: 0.1,
@@ -323,13 +323,15 @@ const SphereVisual = () => {
   const displacement = useRef(0);
 
   useFrame(({ clock }) => {
-    // mesh.current.position.x = Math.sin(clock.getElapsedTime()) * 0.01;
-    mesh.current.material.uniforms.uTime.value = clock.getElapsedTime();
-    mesh.current.material.uniforms.uDisplacementStrength.value = MathUtils.lerp(
-      mesh.current.material.uniforms.uDisplacementStrength.value,
-      displacement.current,
-      0.01
-    );
+    if (mesh.current) {
+      mesh.current.material.uniforms.uTime.value = clock.getElapsedTime();
+      mesh.current.material.uniforms.uDisplacementStrength.value =
+        MathUtils.lerp(
+          mesh.current.material.uniforms.uDisplacementStrength.value,
+          displacement.current,
+          0.01
+        );
+    }
   });
 
   return (
