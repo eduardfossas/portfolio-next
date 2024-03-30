@@ -120,7 +120,7 @@ export default function Home({}) {
           ></path>
         </symbol>
       </svg>
-      <main ref={containerRef} className="w-full bg-red-500 min-h-screen">
+      <main ref={containerRef} className="w-full bg-red-500 min-h-screen ">
         <Test />
         <section className="mb-10 md:mb-40 p-5 2xl:p-20">
           <article className="text-2xl relative md:text-3xl 2xl:text-4xl">
@@ -153,14 +153,14 @@ export default function Home({}) {
               ref={firstSectionRef}
               className="grid grid-cols-12 md:gap-10 overflow-hidden relative"
             >
-              <p className="col-span-full md:col-start-1 md:col-span-6 ">
+              <p className="col-span-full md:col-start-1 md:col-span-6 tracking-[-0.005em]">
                 Dear Tailwind Labs Team.
                 <br />I am writing to you to express my interest in the Design
                 Engineer position. I am convinced this is a one-life-time
                 opportunity to be part of a team that is pushing the boundaries
                 of the world wide web and bring communities together.
               </p>
-              <p className="col-span-full md:col-start-7 md:col-span-7">
+              <p className="col-span-full md:col-start-7 md:col-span-7 tracking-[-0.005em]">
                 My ten years of experience in web technologies could be of
                 interest to the team, as I have acquired many skills in all
                 phases of web development. I am confident that I can contribute
@@ -182,7 +182,7 @@ export default function Home({}) {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
-              className="px-5 2xl:leading-[3.5rem] md:p-0 col-span-full md:col-start-3 md:col-span-8 md:text-center"
+              className="px-5 2xl:leading-[3.5rem] md:p-0 col-span-full md:col-start-3 md:col-span-8 md:text-center tracking-[-0.005em]"
             >
               As an example, I would like to speak about Foam Talent 2021, a
               project that brought together all of my skills and of which I am
@@ -232,13 +232,13 @@ export default function Home({}) {
               transition={{ duration: 0.7 }}
               className="md:border-b-2 col-span-full origin-left"
             ></motion.div>
-            <p className="border-b-2 pb-20 col-span-full md:col-start-1 md:col-span-6 md:border-none md:pb-0 md:whitespace-break-spaces">
+            <p className="border-b-2 pb-20 col-span-full md:col-start-1 md:col-span-6 md:border-none md:pb-0 md:whitespace-break-spaces tracking-[-0.005em]">
               There are five things that {"\n"}really excite me about this role:
             </p>
             <div className="col-span-full md:col-start-7 md:col-span-6">
               <ul
                 role="list"
-                className="list-none space-y-3 mb-7 marker:text-indigo-600"
+                className="list-none space-y-3 mb-7 marker:text-indigo-600 tracking-[-0.005em]"
               >
                 <li className="pb-5">
                   Being part of a team where individuals have many skills and
@@ -290,50 +290,58 @@ export default function Home({}) {
             </div>
           </article>
         </section>
-        <section className="bg-white p-5 py-10 2xl:p-20 2xl:pb-32">
-          <article className="text-2xl relative md:text-3xl 2xl:text-4xl">
-            <div className="grid grid-cols-12 md:gap-10 mb-10">
-              <figure className="col-span-full md:col-start-3 md:col-span-8 md:mb-10">
-                <View className="relative w-full aspect-square md:aspect-video block">
-                  <SphereVisual />
-                </View>
+        <div>
+          <section className="bg-white p-5 py-10 2xl:p-20 2xl:pb-32">
+            <article className="text-2xl relative md:text-3xl 2xl:text-4xl">
+              <div className="grid grid-cols-12 md:gap-10 mb-10">
+                <figure className="col-span-full md:col-start-3 md:col-span-8 md:mb-10">
+                  <View className="relative w-full aspect-square md:aspect-video block">
+                    <SphereVisual />
+                  </View>
 
-                <figcaption className="mt-1 leading-tight text-lg text-center">
-                  Touch or hover to se a bit of magic!
-                </figcaption>
-              </figure>
-            </div>
+                  <figcaption className="mt-1 leading-tight text-lg text-center">
+                    Touch or hover to se a bit of magic!
+                  </figcaption>
+                </figure>
+              </div>
 
-            <div
-              ref={thirdSectionRef}
-              className="grid grid-cols-12 md:gap-10 overflow-hidden relative"
-            >
-              <p className="col-span-full md:col-start-1 md:col-span-6">
-                One skill that I always wanted to learn since I was a kid was
-                3D. Funny enough, it was not until 4 years ago that I started
-                self-studying computer graphics. I am mentioning this because
-                meanwhile I was learning,
+              <div
+                ref={thirdSectionRef}
+                className="grid grid-cols-12 md:gap-10 overflow-hidden relative"
+              >
+                <p className="col-span-full md:col-start-1 md:col-span-6 tracking-[-0.005em]">
+                  One skill that I always wanted to learn since I was a kid was
+                  3D. Funny enough, it was not until 4 years ago that I started
+                  self-studying computer graphics. I am mentioning this because
+                  meanwhile I was learning,
+                </p>
+                <p className="col-span-full md:col-start-7 md:col-span-7 tracking-[-0.005em]">
+                  I decided to release my WebGPU engin, and I participated
+                  actively in the Lygia GLSL library. I am aware that this might
+                  be quite off-topic for CSS...Or maybe not? Did someone say CSS
+                  3D transforms?
+                </p>
+                {/* <Gradient containerRef={thirdSectionRef} color="from-white" /> */}
+              </div>
+            </article>
+          </section>
+          <section className="relative z-10 bg-red-500 p-5 md:p-10 md:pb-20 2xl:p-20 2xl:pb-40 h-svh">
+            <article className="grid grid-cols-12 grid-rows-12 h-full">
+              <p className="col-span-full md:col-start-1 row-span-9 md:col-span-8 md:row-span-11 text-2xl md:text-3xl 2xl:text-4xl tracking-[-0.005em]">
+                Last but not least, one of the main reasons I am applying for
+                this role is the ability to teach others. As a Lead Developer in
+                a digital agency, time is very limited, so it is hard to explain
+                and brief developers complex topics. I do not think it is fair
+                at all, neither for them nor for me. You need time to teach
+                others, and this time is more valuable than the time spent
+                producing the product.
               </p>
-              <p className="col-span-full md:col-start-7 md:col-span-7">
-                I decided to release my WebGPU engin, and I participated
-                actively in the Lygia GLSL library. I am aware that this might
-                be quite off-topic for CSS...Or maybe not? Did someone say CSS
-                3D transforms?
+              <p className="col-span-full text-3xl md:text-6xl ">
+                Sincerely <br className="md:hidden" /> — Eduard Fossas
               </p>
-              {/* <Gradient containerRef={thirdSectionRef} color="from-white" /> */}
-            </div>
-          </article>
-        </section>
-        {/* <section className="p-5 md:p-10 md:pb-20 2xl:p-20 2xl:pb-40 h-svh">
-          <p className="text-2xl md:text-3xl 2xl:text-4xl">
-            Last but not least, one of the main reasons I am applying for this
-            role is the ability to teach others. As a Lead Developer in a
-            digital agency, time is very limited, so it is hard to explain and
-            brief developers complex topics. I do not think it is fair at all,
-            neither for them nor for me. You need time to teach others, and this
-            time is more valuable than the time spent producing the product.
-          </p>
-        </section> */}
+            </article>
+          </section>
+        </div>
         <Chooser slug="/letter-modern" />
       </main>
       <Canvas containerRef={containerRef} />

@@ -60,7 +60,7 @@ const Chooser = ({ slug }) => {
           }`}
           variants={variants}
         >
-          <Link href="/letter-modern">Modern (WIP)</Link>
+          <Link href="/letter-modern">Modern</Link>
         </motion.div>
       </motion.div>
 
