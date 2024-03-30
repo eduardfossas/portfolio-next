@@ -300,7 +300,7 @@ export default function Home({}) {
                   </View>
 
                   <figcaption className="mt-1 leading-tight text-lg text-center">
-                    Touch or hover to se a bit of magic!
+                    Touch or hover to see a bit of magic!
                   </figcaption>
                 </figure>
               </div>
