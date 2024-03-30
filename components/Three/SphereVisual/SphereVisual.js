@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 import { shaderMaterial } from "@react-three/drei";
 import { extend, useFrame } from "@react-three/fiber";
 import { Color, MathUtils } from "three";
@@ -348,11 +346,10 @@ const SphereVisual = () => {
       onPointerLeave={() => {
         displacement.current = 0;
       }}
-      position={[0, 0, 0]}
       ref={mesh}
     >
       <circleGeometry args={[23, 120, 120]} />
-      <plateMat uColor="#ef4444" key={PlateMat.key} />
+      <plateMat uColor="#ef4444" />
     </mesh>
   );
 };
