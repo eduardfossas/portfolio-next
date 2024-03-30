@@ -326,13 +326,12 @@ const SphereVisual = () => {
 
   useFrame(({ clock }) => {
     if (mesh.current) {
-      mesh.current.material.uniforms.uTime.value = 0;
-      mesh.current.material.uniforms.uDisplacementStrength.value =
-        MathUtils.lerp(
-          mesh.current.material.uniforms.uDisplacementStrength.value,
-          displacement.current,
-          0.01
-        );
+      mesh.current.uTime = clock.getElapsedTime();
+      mesh.current.uDisplacementStrength = MathUtils.lerp(
+        mesh.current.uDisplacementStrength,
+        displacement.current,
+        0.01
+      );
     }
   });
 
@@ -350,10 +349,14 @@ const SphereVisual = () => {
       onPointerLeave={() => {
         displacement.current = 0;
       }}
-      ref={mesh}
     >
       <circleGeometry args={[23, 120, 120]} />
-      <plateMat uColor="#ef4444" />
+      <plateMat
+        ref={mesh}
+        uColor="#ef4444"
+        uTime={0}
+        uDisplacementStrength={0}
+      />
     </mesh>
   );
 };
