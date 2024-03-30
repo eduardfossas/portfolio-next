@@ -153,7 +153,7 @@ export default function Home({}) {
               ref={firstSectionRef}
               className="grid grid-cols-12 md:gap-10 overflow-hidden relative"
             >
-              <p className="col-span-full md:col-start-1 md:col-span-6">
+              <p className="col-span-full md:col-start-1 md:col-span-6 ">
                 Dear Tailwind Labs Team.
                 <br />I am writing to you to express my interest in the Design
                 Engineer position. I am convinced this is a one-life-time
@@ -168,7 +168,7 @@ export default function Home({}) {
                 Printing and Graphic Design could be very advantageous for the
                 team.
               </p>
-              <Gradient containerRef={firstSectionRef} />
+              {/* <Gradient containerRef={firstSectionRef} /> */}
             </div>
           </article>
         </section>
@@ -230,9 +230,9 @@ export default function Home({}) {
               whileInView={{ scaleX: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
-              className="md:border-b-3 col-span-full origin-left"
+              className="md:border-b-2 col-span-full origin-left"
             ></motion.div>
-            <p className="border-b-3 pb-20 col-span-full md:col-start-1 md:col-span-6 md:border-none md:pb-0 md:whitespace-break-spaces">
+            <p className="border-b-2 pb-20 col-span-full md:col-start-1 md:col-span-6 md:border-none md:pb-0 md:whitespace-break-spaces">
               There are five things that {"\n"}really excite me about this role:
             </p>
             <div className="col-span-full md:col-start-7 md:col-span-6">
@@ -249,7 +249,7 @@ export default function Home({}) {
                   whileInView={{ scaleX: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.7 }}
-                  className="border-b-3 mt-0 col-span-full origin-left"
+                  className="border-b-2 mt-0 col-span-full origin-left"
                 ></motion.div>
 
                 <li className="mt-3 pb-5">
@@ -261,7 +261,7 @@ export default function Home({}) {
                   whileInView={{ scaleX: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.7 }}
-                  className="border-b-3 mt-0 col-span-full origin-left"
+                  className="border-b-2 mt-0 col-span-full origin-left"
                 ></motion.div>
                 <li className="mt-3 pb-5">
                   Designing and building templates, interactive experiences, and
@@ -272,7 +272,7 @@ export default function Home({}) {
                   whileInView={{ scaleX: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.7 }}
-                  className="border-b-3 mt-0 col-span-full origin-left"
+                  className="border-b-2 mt-0 col-span-full origin-left"
                 ></motion.div>
                 <li className="mt-3 pb-5">
                   Working with animation APIs as well as CSS animations like
@@ -283,9 +283,9 @@ export default function Home({}) {
                   whileInView={{ scaleX: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.7 }}
-                  className="border-b-3 mt-0 col-span-full origin-left"
+                  className="border-b-2 mt-0 col-span-full origin-left"
                 ></motion.div>
-                <li>I love to learn new skills and tools.</li>
+                <li className="mt-3">I love to learn new skills and tools.</li>
               </ul>
             </div>
           </article>
@@ -309,21 +309,18 @@ export default function Home({}) {
               className="grid grid-cols-12 md:gap-10 overflow-hidden relative"
             >
               <p className="col-span-full md:col-start-1 md:col-span-6">
-                Dear Tailwind Labs Team.
-                <br />I am writing to you to express my interest in the Design
-                Engineer position. I am convinced this is a one-life-time
-                opportunity to be part of a team that is pushing the boundaries
-                of the world wide web and bring communities together.
+                One skill that I always wanted to learn since I was a kid was
+                3D. Funny enough, it was not until 4 years ago that I started
+                self-studying computer graphics. I am mentioning this because
+                meanwhile I was learning,
               </p>
               <p className="col-span-full md:col-start-7 md:col-span-7">
-                My ten years of experience in web technologies could be of
-                interest to the team, as I have acquired many skills in all
-                phases of web development. I am confident that I can contribute
-                to the growth of Tailwind. Furthermore, my background in
-                Printing and Graphic Design could be very advantageous for the
-                team.
+                I decided to release my WebGPU engin, and I participated
+                actively in the Lygia GLSL library. I am aware that this might
+                be quite off-topic for CSS...Or maybe not? Did someone say CSS
+                3D transforms?
               </p>
-              <Gradient containerRef={thirdSectionRef} color="from-white" />
+              {/* <Gradient containerRef={thirdSectionRef} color="from-white" /> */}
             </div>
           </article>
         </section>
