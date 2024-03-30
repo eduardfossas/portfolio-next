@@ -292,22 +292,20 @@ export default function Home({}) {
         </section>
         <div>
           <section className="bg-white p-5 py-10 2xl:p-20 2xl:pb-32">
-            <article className="text-2xl relative md:text-3xl 2xl:text-4xl">
-              <div className="grid grid-cols-12 md:gap-10 mb-10">
-                <figure className="col-span-full md:col-start-3 md:col-span-8 md:mb-10">
-                  <View className="w-full h-64 md:h-96">
-                    <SphereVisual />
-                  </View>
+            <article className="text-2xl md:text-3xl 2xl:text-4xl">
+              <figure className="md:mb-10">
+                <View className="w-full h-64 md:h-96">
+                  <SphereVisual />
+                </View>
 
-                  <figcaption className="mt-1 leading-tight text-lg text-center">
-                    Touch or hover to see a bit of magic!
-                  </figcaption>
-                </figure>
-              </div>
+                <figcaption className="mt-1 leading-tight text-lg text-center">
+                  Touch or hover to see a bit of magic!
+                </figcaption>
+              </figure>
 
               <div
                 ref={thirdSectionRef}
-                className="grid grid-cols-12 md:gap-10 overflow-hidden relative"
+                className="grid grid-cols-12 md:gap-10 overflow-hidden"
               >
                 <p className="col-span-full md:col-start-1 md:col-span-6 tracking-[-0.005em]">
                   One skill that I always wanted to learn since I was a kid was
