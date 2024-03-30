@@ -290,16 +290,16 @@ export default function Home({}) {
             </div>
           </article>
         </section>
-        <section className="bg-white p-5 py-10 2xl:p-20 2xl:pb-96">
+        <section className="bg-white p-5 py-10 2xl:p-20 2xl:pb-32">
           <article className="text-2xl relative md:text-3xl 2xl:text-4xl">
             <div className="grid grid-cols-12 md:gap-10 mb-10">
-              <figure className="col-span-full md:col-start-4 md:col-span-6 md:mb-10">
-                <View className="relative w-full ar-14-9 block">
+              <figure className="col-span-full md:col-start-3 md:col-span-8 md:mb-10">
+                <View className="relative w-full aspect-square md:aspect-video block">
                   <SphereVisual />
                 </View>
 
-                <figcaption className="mt-1 leading-tight text-lg">
-                  A bit of fractal brownian motion. Why not?
+                <figcaption className="mt-1 leading-tight text-lg text-center">
+                  Touch or hover to se a bit of magic!
                 </figcaption>
               </figure>
             </div>
