@@ -5,7 +5,7 @@ import { extend, useFrame } from "@react-three/fiber";
 import { Color, MathUtils } from "three";
 import { useRef } from "react";
 
-const PlateMat = shaderMaterial(
+const SphereMat = shaderMaterial(
   {
     uColor: new Color(null),
     uTime: 0,
@@ -317,7 +317,7 @@ float cnoise(in vec4 P) {
       `
 );
 
-extend({ PlateMat });
+extend({ SphereMat });
 
 const SphereVisual = () => {
   const mesh = useRef(null);
@@ -348,7 +348,7 @@ const SphereVisual = () => {
       }}
     >
       <circleGeometry args={[23, 120, 120]} />
-      <plateMat
+      <sphereMat
         ref={mesh}
         uColor="#ef4444"
         uTime={0}
