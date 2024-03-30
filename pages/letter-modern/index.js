@@ -295,7 +295,7 @@ export default function Home({}) {
             <article className="text-2xl relative md:text-3xl 2xl:text-4xl">
               <div className="grid grid-cols-12 md:gap-10 mb-10">
                 <figure className="col-span-full md:col-start-3 md:col-span-8 md:mb-10">
-                  <View className="relative w-full aspect-square md:aspect-video block">
+                  <View className="relative h-80 w-full aspect-square md:aspect-video">
                     <SphereVisual />
                   </View>
 

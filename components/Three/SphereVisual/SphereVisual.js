@@ -8,7 +8,6 @@ import { useRef } from "react";
 const PlateMat = shaderMaterial(
   {
     uColor: new Color(null),
-    uTexture: null,
     uTime: 0,
     uDistortionFrequency: 0.1,
     uDistortionStrength: 0.1,
@@ -325,14 +324,12 @@ const SphereVisual = () => {
   const displacement = useRef(0);
 
   useFrame(({ clock }) => {
-    if (mesh.current) {
-      mesh.current.uTime += 0.01;
-      mesh.current.uDisplacementStrength = MathUtils.lerp(
-        mesh.current.uDisplacementStrength,
-        displacement.current,
-        0.01
-      );
-    }
+    mesh.current.uTime += 0.01;
+    mesh.current.uDisplacementStrength = MathUtils.lerp(
+      mesh.current.uDisplacementStrength,
+      displacement.current,
+      0.01
+    );
   });
 
   return (
