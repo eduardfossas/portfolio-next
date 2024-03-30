@@ -298,8 +298,7 @@ export default function Home({}) {
                   <SphereVisual />
                 </View>
                 <figcaption className="mt-1 leading-tight text-lg text-center">
-                  Having fun with computer graphics. Cubes inside cubes inside
-                  cubes.
+                  Hover or tap to see some magic!
                 </figcaption>
               </figure>
             </div>
