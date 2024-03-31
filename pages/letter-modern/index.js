@@ -128,7 +128,7 @@ export default function Home({}) {
               <motion.figure
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 1, ease: [0.42, 0, 0.21, 1] }}
                 className="col-span-full md:col-start-4 md:col-span-6 md:mb-10"
               >
                 <picture className="relative w-full ar-14-9 block">
@@ -178,12 +178,7 @@ export default function Home({}) {
             style={{ opacity: scrollYProgress }}
             className="py-10 text-2xl md:text-3xl 2xl:text-5xl md:py-20 flex items-center justify-center md:grid grid-cols-12 gap-10 sticky top-0"
           >
-            <motion.p
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.5 }}
-              className="px-5 2xl:leading-[3.5rem] md:p-0 col-span-full md:col-start-3 md:col-span-8 md:text-center tracking-[-0.005em]"
-            >
+            <motion.p className="px-5 2xl:leading-[3.5rem] md:p-0 col-span-full md:col-start-3 md:col-span-8 md:text-center tracking-[-0.005em]">
               As an example, I would like to speak about Foam Talent 2021, a
               project that brought together all of my skills and of which I am
               very proud. It was a collaborative effort involving design,
@@ -228,8 +223,7 @@ export default function Home({}) {
             <motion.div
               initial={{ scaleX: 0 }}
               whileInView={{ scaleX: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
+              transition={{ duration: 1, ease: [0.42, 0, 0.21, 1] }}
               className="md:border-b-2 col-span-full origin-left"
             ></motion.div>
             <p className="border-b-2 pb-[3.75rem] col-span-full md:col-start-1 md:col-span-6 md:border-none md:pb-0 md:whitespace-break-spaces tracking-[-0.005em]">
@@ -247,8 +241,7 @@ export default function Home({}) {
                 <motion.div
                   initial={{ scaleX: 0 }}
                   whileInView={{ scaleX: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.7 }}
+                  transition={{ duration: 1, ease: [0.42, 0, 0.21, 1] }}
                   className="border-b-2 mt-0 col-span-full origin-left"
                 ></motion.div>
 
@@ -259,8 +252,7 @@ export default function Home({}) {
                 <motion.div
                   initial={{ scaleX: 0 }}
                   whileInView={{ scaleX: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.7 }}
+                  transition={{ duration: 1, ease: [0.42, 0, 0.21, 1] }}
                   className="border-b-2 mt-0 col-span-full origin-left"
                 ></motion.div>
                 <li className="mt-3 pb-5">
@@ -270,8 +262,7 @@ export default function Home({}) {
                 <motion.div
                   initial={{ scaleX: 0 }}
                   whileInView={{ scaleX: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.7 }}
+                  transition={{ duration: 1, ease: [0.42, 0, 0.21, 1] }}
                   className="border-b-2 mt-0 col-span-full origin-left"
                 ></motion.div>
                 <li className="mt-3 pb-5">
@@ -281,8 +272,7 @@ export default function Home({}) {
                 <motion.div
                   initial={{ scaleX: 0 }}
                   whileInView={{ scaleX: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.7 }}
+                  transition={{ duration: 1, ease: [0.42, 0, 0.21, 1] }}
                   className="border-b-2 mt-0 col-span-full origin-left"
                 ></motion.div>
                 <li className="mt-3">I love to learn new skills and tools.</li>
