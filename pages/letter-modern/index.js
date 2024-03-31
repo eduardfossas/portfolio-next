@@ -122,7 +122,7 @@ export default function Home({}) {
       </svg>
       <main ref={containerRef} className="w-full bg-red-500 min-h-screen ">
         <Test />
-        <section className="mb-10 md:mb-40 p-5 2xl:p-20">
+        <section className="mb-10 md:mb-20 p-5 2xl:p-20">
           <article className="text-2xl relative md:text-3xl 2xl:text-4xl">
             <div className="grid grid-cols-12 md:gap-10 mb-10">
               <motion.figure
@@ -173,10 +173,10 @@ export default function Home({}) {
           </article>
         </section>
 
-        <section ref={ref} className="h-[200vh] bg-white">
+        <section ref={ref} className="h-fit bg-white">
           <motion.article
             style={{ opacity: scrollYProgress }}
-            className="text-2xl md:text-3xl 2xl:text-5xl h-screen flex items-center justify-center md:grid grid-cols-12 gap-10 sticky top-0"
+            className="py-10 text-2xl md:text-3xl 2xl:text-5xl md:py-20 flex items-center justify-center md:grid grid-cols-12 gap-10 sticky top-0"
           >
             <motion.p
               initial={{ opacity: 0 }}
@@ -223,7 +223,7 @@ export default function Home({}) {
             </figure>
           </div>
         </section>
-        <section className="p-5 md:p-10 2xl:p-20 md:mt-20 md:mb-20">
+        <section className="mb-10 md:mb-0 p-5 2xl:p-20">
           <article className="grid grid-cols-12 gap-y-5 md:gap-10 text-2xl md:text-3xl 2xl:text-4xl">
             <motion.div
               initial={{ scaleX: 0 }}
@@ -232,13 +232,13 @@ export default function Home({}) {
               transition={{ duration: 0.7 }}
               className="md:border-b-2 col-span-full origin-left"
             ></motion.div>
-            <p className="border-b-2 pb-20 col-span-full md:col-start-1 md:col-span-6 md:border-none md:pb-0 md:whitespace-break-spaces tracking-[-0.005em]">
+            <p className="border-b-2 pb-[3.75rem] col-span-full md:col-start-1 md:col-span-6 md:border-none md:pb-0 md:whitespace-break-spaces tracking-[-0.005em]">
               There are five things that {"\n"}really excite me about this role:
             </p>
             <div className="col-span-full md:col-start-7 md:col-span-6">
               <ul
                 role="list"
-                className="list-none space-y-3 mb-7 marker:text-indigo-600 tracking-[-0.005em]"
+                className="list-none space-y-3 md:mb-7 marker:text-indigo-600 tracking-[-0.005em]"
               >
                 <li className="pb-5">
                   Being part of a team where individuals have many skills and
@@ -290,7 +290,7 @@ export default function Home({}) {
             </div>
           </article>
         </section>
-        <section className="bg-white p-5 py-10 2xl:p-20 2xl:pb-32">
+        <section className="bg-white mb-5 p-5 pb-[3.75rem] md:mb-0 2xl:p-20 2xl:pb-40">
           <article className="text-2xl md:text-3xl 2xl:text-4xl">
             <div className="grid grid-cols-12 md:gap-10 mb-10">
               <figure className="mb-5 col-span-full md:col-start-4 md:col-span-6 md:mb-10">
@@ -319,7 +319,7 @@ export default function Home({}) {
             </div>
           </article>
         </section>
-        <section className="relative z-10 bg-red-500 p-5 md:p-10 md:pb-20 2xl:p-20 2xl:pb-40 h-svh">
+        <section className="relative z-10 bg-red-500 p-5 md:p-10 md:pb-20 2xl:p-20 h-svh">
           <article className="grid grid-cols-12 grid-rows-12 h-full">
             <p className="col-span-full md:col-start-1 row-span-9 md:col-span-8 md:row-span-11 text-2xl md:text-3xl 2xl:text-4xl tracking-[-0.005em]">
               Last but not least, one of the main reasons I am applying for this
