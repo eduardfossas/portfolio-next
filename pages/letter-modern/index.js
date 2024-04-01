@@ -294,8 +294,14 @@ export default function Home({}) {
                   <SphereVisual />
                 </View>
                 <figcaption className="mt-1 leading-tight text-sm md:text-lg text-center">
-                  Simple circle with custom shader material. Hover or tap to see
-                  some magic!
+                  Simple circle with custom shader material.{" "}
+                  <span className="hidden [@media(hover:hover)]:inline">
+                    Hover
+                  </span>
+                  <span className="inline [@media(hover:hover)]:hidden">
+                    Tap
+                  </span>{" "}
+                  to see some magic!
                 </figcaption>
               </figure>
             </div>
