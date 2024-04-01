@@ -125,12 +125,7 @@ export default function Home({}) {
         <section className="mb-10 md:mb-20 p-5 2xl:p-20">
           <article className="text-xl leading-6 relative md:text-3xl 2xl:text-4xl">
             <div className="grid grid-cols-12 md:gap-10 mb-10">
-              <motion.figure
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 1, ease: [0.42, 0, 0.21, 1] }}
-                className="col-span-full md:col-start-4 md:col-span-6 md:mb-10"
-              >
+              <figure className="col-span-full md:col-start-4 md:col-span-6 md:mb-10">
                 <picture className="relative w-full ar-14-9 block">
                   <Image
                     src="https://a.storyblok.com/f/167748/940x603/3e62e38c75/icaria-magazine.jpg"
@@ -147,7 +142,7 @@ export default function Home({}) {
                   Icaria Magazine; one of my first professional projects as a
                   Graphic Designer.
                 </figcaption>
-              </motion.figure>
+              </figure>
             </div>
             <div
               ref={firstSectionRef}
@@ -334,10 +329,62 @@ export default function Home({}) {
               product.
             </p>
             <p className="col-span-full text-3xl md:text-6xl">
-              Thank you for reading
-              <span className="text-lg md:text-2xl block ml-0.5 md:mt-2">
+              <motion.span
+                className="relative inline-block"
+                whileInView={{ y: 0, opacity: 1 }}
+                initial={{ y: 15, opacity: 0 }}
+                transition={{ duration: 1, ease: [0.42, 0, 0.21, 1] }}
+              >
+                Thank
+              </motion.span>{" "}
+              <motion.span
+                className="relative inline-block"
+                whileInView={{ y: 0, opacity: 1 }}
+                initial={{ y: 15, opacity: 0 }}
+                transition={{
+                  duration: 1,
+                  ease: [0.42, 0, 0.21, 1],
+                  delay: 0.07,
+                }}
+              >
+                you
+              </motion.span>{" "}
+              <motion.span
+                className="relative inline-block"
+                whileInView={{ y: 0, opacity: 1 }}
+                initial={{ y: 15, opacity: 0 }}
+                transition={{
+                  duration: 1,
+                  ease: [0.42, 0, 0.21, 1],
+                  delay: 0.14,
+                }}
+              >
+                for
+              </motion.span>{" "}
+              <motion.span
+                className="relative inline-block"
+                whileInView={{ y: 0, opacity: 1 }}
+                initial={{ y: 15, opacity: 0 }}
+                transition={{
+                  duration: 1,
+                  ease: [0.42, 0, 0.21, 1],
+                  delay: 0.21,
+                }}
+              >
+                reading
+              </motion.span>
+              <motion.span
+                whileInView={{ y: 0, opacity: 1 }}
+                initial={{ y: 15, opacity: 0 }}
+                transition={{
+                  duration: 1,
+                  ease: [0.42, 0, 0.21, 1],
+                  delay: 0.15,
+                }}
+                className="text-lg md:text-2xl block ml-0.5 md:mt-2"
+              >
                 Sincerely — Eduard Fossas
-              </span>
+              </motion.span>
             </p>
           </article>
         </section>
