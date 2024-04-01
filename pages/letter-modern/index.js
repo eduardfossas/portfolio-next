@@ -123,7 +123,7 @@ export default function Home({}) {
       <main ref={containerRef} className="w-full bg-red-500 min-h-screen ">
         <Test />
         <section className="mb-10 md:mb-20 p-5 2xl:p-20">
-          <article className="text-2xl relative md:text-3xl 2xl:text-4xl">
+          <article className="text-xl leading-6 relative md:text-3xl 2xl:text-4xl">
             <div className="grid grid-cols-12 md:gap-10 mb-10">
               <motion.figure
                 initial={{ opacity: 0 }}
@@ -143,9 +143,9 @@ export default function Home({}) {
                   />
                 </picture>
 
-                <figcaption className="mt-1 leading-tight text-lg">
-                  Icaria Magazine was one of the first professional projects I
-                  worked on as a Graphic Designer.
+                <figcaption className="mt-1 leading-tight text-sm md:text-lg">
+                  Icaria Magazine; one of my first professional projects as a
+                  Graphic Designer.
                 </figcaption>
               </motion.figure>
             </div>
@@ -154,13 +154,13 @@ export default function Home({}) {
               className="grid grid-cols-12 md:gap-10 overflow-hidden relative"
             >
               <p className="col-span-full md:col-start-1 md:col-span-6 tracking-[-0.005em]">
-                Dear Tailwind Labs Team.
-                <br />I am writing to you to express my interest in the Design
-                Engineer position. I am convinced this is a one-life-time
-                opportunity to be part of a team that is pushing the boundaries
-                of the world wide web and bring communities together.
+                Dear Tailwind Labs Team, I am writing to you to express my
+                interest in the Design Engineer position. I am convinced this is
+                a one-life-time opportunity to be part of a team that is pushing
+                the boundaries of the world wide web and bring communities
+                together.
               </p>
-              <p className="col-span-full md:col-start-7 md:col-span-7 tracking-[-0.005em]">
+              <p className="indent-6 md:indent-0 col-span-full md:col-start-7 md:col-span-7 tracking-[-0.005em]">
                 My ten years of experience in web technologies could be of
                 interest to the team, as I have acquired many skills in all
                 phases of web development. I am confident that I can contribute
@@ -176,9 +176,9 @@ export default function Home({}) {
         <section ref={ref} className="h-fit bg-white">
           <motion.article
             style={{ opacity: scrollYProgress }}
-            className="py-10 text-2xl md:text-3xl 2xl:text-5xl md:py-20 flex items-center justify-center md:grid grid-cols-12 gap-10 sticky top-0"
+            className="py-10 text-xl leading-6 md:text-3xl 2xl:text-5xl md:py-20 flex items-center justify-center md:grid grid-cols-12 gap-10 sticky top-0"
           >
-            <motion.p className="px-5 2xl:leading-[3.5rem] md:p-0 col-span-full md:col-start-3 md:col-span-8 md:text-center tracking-[-0.005em]">
+            <motion.p className="px-5 indent-6 md:indent-0 2xl:leading-[3.5rem] md:p-0 col-span-full md:col-start-3 md:col-span-8 md:text-center tracking-[-0.005em]">
               As an example, I would like to speak about Foam Talent 2021, a
               project that brought together all of my skills and of which I am
               very proud. It was a collaborative effort involving design,
@@ -186,8 +186,8 @@ export default function Home({}) {
               phases of the project. I was genuinely delighted that the project
               garnered a lot of attention and recognition. However, what still
               brings me the greatest joy is the fact that I enjoyed every day,
-              every hour, every minute of the project because I already knew how
-              special it was.
+              every hour, every minute of the project because I knew how special
+              it was.
             </motion.p>
           </motion.article>
 
@@ -199,7 +199,7 @@ export default function Home({}) {
                 }
                 color="red-500"
               />
-              <figcaption className="mt-1 leading-tight text-lg">
+              <figcaption className="mt-1 leading-tight text-sm md:text-lg">
                 Video of Foam Talent 2021 website. You can see it live{" "}
                 <a
                   className="underline hover:no-underline inline-flex items-center"
@@ -219,16 +219,22 @@ export default function Home({}) {
           </div>
         </section>
         <section className="mb-10 md:mb-0 p-5 2xl:p-20">
-          <article className="grid grid-cols-12 gap-y-5 md:gap-10 text-2xl md:text-3xl 2xl:text-4xl">
+          <article className="grid grid-cols-12 gap-y-5 md:gap-10 text-xl leading-6 md:text-3xl 2xl:text-4xl">
             <motion.div
               initial={{ scaleX: 0 }}
               whileInView={{ scaleX: 1 }}
               transition={{ duration: 1, ease: [0.42, 0, 0.21, 1] }}
-              className="md:border-b-2 col-span-full origin-left"
+              className="hidden md:block md:border-b-2 col-span-full origin-left"
             ></motion.div>
-            <p className="border-b-2 pb-[3.75rem] col-span-full md:col-start-1 md:col-span-6 md:border-none md:pb-0 md:whitespace-break-spaces tracking-[-0.005em]">
+            <p className=" pb-[3.75rem] col-span-full md:col-start-1 md:col-span-6 md:border-none md:pb-0 md:whitespace-break-spaces tracking-[-0.005em]">
               There are five things that {"\n"}really excite me about this role:
             </p>
+            <motion.div
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              transition={{ duration: 1, ease: [0.42, 0, 0.21, 1] }}
+              className="border-b-2 md:hidden col-span-full origin-left"
+            ></motion.div>
             <div className="col-span-full md:col-start-7 md:col-span-6">
               <ul
                 role="list"
@@ -281,26 +287,27 @@ export default function Home({}) {
           </article>
         </section>
         <section className="bg-white mb-5 p-5 pb-[3.75rem] md:mb-0 2xl:p-20 2xl:pb-40">
-          <article className="text-2xl md:text-3xl 2xl:text-4xl">
+          <article className="text-xl leading-6 md:text-3xl 2xl:text-4xl">
             <div className="grid grid-cols-12 md:gap-10 mb-10">
               <figure className="mb-5 col-span-full md:col-start-4 md:col-span-6 md:mb-10">
                 <View className="w-full aspect-square md:aspect-video">
                   <SphereVisual />
                 </View>
-                <figcaption className="mt-1 leading-tight text-lg text-center">
-                  Hover or tap to see some magic!
+                <figcaption className="mt-1 leading-tight text-sm md:text-lg text-center">
+                  Simple circle with custom shader material. Hover or tap to see
+                  some magic!
                 </figcaption>
               </figure>
             </div>
             <div className="grid grid-cols-12 md:gap-10">
-              <p className="col-span-full md:col-start-1 md:col-span-6 tracking-[-0.005em]">
+              <p className="col-span-full indent-6 md:indent-0 md:col-start-1 md:col-span-6 tracking-[-0.005em]">
                 One skill that I always wanted to learn since I was a kid was
                 3D. Funny enough, it was not until 4 years ago that I started
                 self-studying computer graphics. I am mentioning this because
                 meanwhile I was learning,
               </p>
               <p className="col-span-full md:col-start-7 md:col-span-7 tracking-[-0.005em]">
-                I decided to release my WebGPU engin, and I participated
+                I decided to release my WebGPU engine, and I participated
                 actively in the Lygia GLSL library. I am aware that this might
                 be quite off-topic for CSS...Or maybe not? Did someone say CSS
                 3D transforms?
@@ -311,7 +318,7 @@ export default function Home({}) {
         </section>
         <section className="relative z-10 bg-red-500 p-5 md:p-10 md:pb-20 2xl:p-20 h-svh">
           <article className="grid grid-cols-12 grid-rows-12 h-full">
-            <p className="col-span-full md:col-start-1 row-span-9 md:col-span-8 md:row-span-11 text-2xl md:text-3xl 2xl:text-4xl tracking-[-0.005em]">
+            <p className="col-span-full indent-6 md:indent-0 md:col-start-1 row-span-10 md:col-span-8 md:row-span-11 text-xl leading-6 md:text-3xl 2xl:text-4xl tracking-[-0.005em]">
               Last but not least, one of the main reasons I am applying for this
               role is the ability to teach others. As a Lead Developer in a
               digital agency, time is very limited, so it is hard to explain and
@@ -320,8 +327,11 @@ export default function Home({}) {
               this time is more valuable than the time spent producing the
               product.
             </p>
-            <p className="col-span-full text-3xl md:text-6xl ">
-              Sincerely <br className="md:hidden" /> — Eduard Fossas
+            <p className="col-span-full text-3xl md:text-6xl">
+              Thank you for reading
+              <span className="text-lg md:text-2xl block ml-0.5 md:mt-2">
+                Sincerely — Eduard Fossas
+              </span>
             </p>
           </article>
         </section>
