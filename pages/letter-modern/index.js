@@ -122,7 +122,7 @@ export default function Home({}) {
       </svg>
       <main ref={containerRef} className="w-full bg-red-500 min-h-screen">
         <Test />
-        <section className="mb-10 md:mb-20 p-5 2xl:p-20 max-w-[2100px] mx-auto">
+        <section className="mb-10 md:mb-20 p-5 2xl:p-20 max-w-[1920px] mx-auto">
           <article className="text-xl leading-6 relative md:text-3xl 2xl:text-4xl">
             <div className="grid grid-cols-12 md:gap-10 mb-10">
               <figure className="col-span-full md:col-start-4 md:col-span-6 md:mb-10">
@@ -168,7 +168,7 @@ export default function Home({}) {
           </article>
         </section>
 
-        <section ref={ref} className="h-fit bg-white">
+        <section ref={ref} className="h-fit bg-white ">
           <motion.article
             style={{ opacity: scrollYProgress }}
             className="py-10 text-xl leading-6 md:text-3xl 2xl:text-5xl md:py-20 flex items-center justify-center md:grid grid-cols-12 gap-10 sticky top-0"
@@ -213,7 +213,7 @@ export default function Home({}) {
             </figure>
           </div>
         </section>
-        <section className="mb-10 md:mb-0 p-5 md:py-20 2xl:p-20 max-w-[2100px] mx-auto">
+        <section className="mb-10 md:mb-0 p-5 md:py-20 2xl:p-20 max-w-[1920px] mx-auto">
           <article className="grid grid-cols-12 gap-y-5 md:gap-10 text-xl leading-6 md:text-3xl 2xl:text-4xl">
             <motion.div
               initial={{ scaleX: 0 }}
@@ -282,7 +282,7 @@ export default function Home({}) {
           </article>
         </section>
         <section className="bg-white mb-5 md:mb-0">
-          <article className="text-xl leading-6 md:text-3xl 2xl:text-4xl p-5 pb-[3.75rem] md:py-20 2xl:p-20 2xl:pb-40 max-w-[2100px] mx-auto">
+          <article className="text-xl leading-6 md:text-3xl 2xl:text-4xl p-5 pb-[3.75rem] md:py-20 2xl:p-20 2xl:pb-40 max-w-[1920px] mx-auto">
             <div className="grid grid-cols-12 md:gap-10 mb-10">
               <figure className="mb-5 col-span-full md:col-start-4 md:col-span-6 md:mb-10">
                 <View className="w-full aspect-square md:aspect-video">
@@ -317,7 +317,7 @@ export default function Home({}) {
             </div>
           </article>
         </section>
-        <section className="relative z-10 bg-red-500 p-5 md:py-20 md:pb-20 2xl:p-20 h-svh max-w-[2100px] mx-auto">
+        <section className="relative z-10 bg-red-500 p-5 md:py-20 md:pb-20 2xl:p-20 h-svh max-w-[1920px] mx-auto">
           <article className="grid grid-cols-12 grid-rows-12 h-full">
             <p className="col-span-full indent-6 md:indent-0 md:col-start-1 row-span-10 md:col-span-8 md:row-span-11 text-xl leading-6 md:text-3xl 2xl:text-4xl tracking-[-0.005em]">
               Last but not least, one of the main reasons I am applying for this
