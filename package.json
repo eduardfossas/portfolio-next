@@ -17,6 +17,7 @@
     "@studio-freight/lenis": "^1.0.19",
     "@use-gesture/react": "^10.2.18",
     "@vercel/analytics": "^1.2.2",
+    "@vercel/speed-insights": "^1.0.10",
     "axios": "^0.27.2",
     "framer-motion": "^11.0.22",
     "gsap": "^3.12.2",
