@@ -2,7 +2,14 @@
 import { shaderMaterial } from "@react-three/drei";
 import { useFrame, extend } from "@react-three/fiber";
 import { useRef, useMemo, useState } from "react";
-import { BackSide, MathUtils, Object3D, Vector3 } from "three";
+import {
+  AdditiveBlending,
+  BackSide,
+  MathUtils,
+  Object3D,
+  Vector3,
+} from "three";
+import useMatchMedia from "hooks/useMatchMedia";
 
 const DUMMY = new Object3D();
 
@@ -28,7 +35,7 @@ extend({ PlateMat });
 
 const Visual = ({ count = 20, color = new Vector3(0, 0, 0) }) => {
   const mesh = useRef();
-
+  const isDarkTheme = useMatchMedia("(prefers-color-scheme: dark)");
   const instances = useMemo(() => {
     const temp = [];
 
@@ -71,7 +78,7 @@ const Visual = ({ count = 20, color = new Vector3(0, 0, 0) }) => {
           <boxGeometry args={[50, 50, 50]} />
           <meshBasicMaterial
             transparent
-            color={"#4f46e5"}
+            color={`${isDarkTheme ? "#ffffff" : "#4f46e5"}`}
             opacity={0.1}
             depthWrite={false}
             side={BackSide}

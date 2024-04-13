@@ -13,6 +13,7 @@ body {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-white);
 }
 
 body::-webkit-scrollbar {
@@ -34,4 +35,17 @@ body::-webkit-scrollbar {
 
 .ar-14-9 {
   aspect-ratio: 14/9;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--color-gray-950);
+  }
+
+  :root {
+    --color-slate-500: #cacaca;
+    --color-slate-800: #fafafa;
+    --color-indigo-600: #cacaca;
+    --color-red-500: var(--color-gray-950);
+  }
 }

@@ -42,10 +42,10 @@ const Test = () => {
   return (
     <motion.section
       ref={ref}
-      className="h-svh p-5 md:p-10 md:pr-0 mb-10 md:mb-20 origin-bottom"
+      className="h-svh p-5 md:p-10 md:pr-0 mb-10 md:mb-20 origin-bottom "
     >
       <motion.svg
-        className="w-full h-full"
+        className="w-full h-full fill-black dark:fill-white"
         viewBox="0 0 39 9"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -53,24 +53,24 @@ const Test = () => {
       >
         <path
           d="M38.2904 4.48295C38.2904 5.45455 38.1015 6.27415 37.7236 6.94176C37.3458 7.60653 36.8358 8.1108 36.1938 8.45455C35.5518 8.79546 34.8358 8.96591 34.0461 8.96591C33.2506 8.96591 32.5319 8.79403 31.8898 8.45028C31.2506 8.10369 30.7421 7.59801 30.3643 6.93324C29.9893 6.26563 29.8018 5.44886 29.8018 4.48295C29.8018 3.51136 29.9893 2.69318 30.3643 2.02841C30.7421 1.3608 31.2506 0.856534 31.8898 0.515625C32.5319 0.171875 33.2506 0 34.0461 0C34.8358 0 35.5518 0.171875 36.1938 0.515625C36.8358 0.856534 37.3458 1.3608 37.7236 2.02841C38.1015 2.69318 38.2904 3.51136 38.2904 4.48295ZM35.8529 4.48295C35.8529 3.96023 35.7833 3.51989 35.6441 3.16193C35.5077 2.80114 35.3046 2.52841 35.0347 2.34375C34.7677 2.15625 34.4381 2.0625 34.0461 2.0625C33.654 2.0625 33.3231 2.15625 33.0532 2.34375C32.7861 2.52841 32.583 2.80114 32.4438 3.16193C32.3074 3.51989 32.2393 3.96023 32.2393 4.48295C32.2393 5.00568 32.3074 5.44744 32.4438 5.80824C32.583 6.16619 32.7861 6.43892 33.0532 6.62642C33.3231 6.81108 33.654 6.90341 34.0461 6.90341C34.4381 6.90341 34.7677 6.81108 35.0347 6.62642C35.3046 6.43892 35.5077 6.16619 35.6441 5.80824C35.7833 5.44744 35.8529 5.00568 35.8529 4.48295Z"
-          fill="black"
+          fill="inherit"
           transform="scale(1 0.98) translate(0 0.1)"
         />
         <path
           d="M23.3203 8.8466V0.119324H25.6896V6.93751H29.218V8.8466H23.3203Z"
-          fill="black"
+          fill="inherit"
         />
         <path
           d="M16.4648 8.8466V0.119324H18.8342V6.93751H22.3626V8.8466H16.4648Z"
-          fill="black"
+          fill="inherit"
         />
         <path
           d="M9 8.8466V0.119324H15.2898V2.02841H11.3693V3.52841H14.9659V5.43751H11.3693V6.93751H15.2727V8.8466H9Z"
-          fill="black"
+          fill="inherit"
         />
         <path
           d="M0 8.8466V0.119324H2.36932V3.52841H5.50568V0.119324H7.875V8.8466H5.50568V5.43751H2.36932V8.8466H0Z"
-          fill="black"
+          fill="inherit"
         />
       </motion.svg>
     </motion.section>
@@ -122,7 +122,7 @@ export default function Home({}) {
       </svg>
       <main ref={containerRef} className="w-full bg-red-500 min-h-screen">
         <Test />
-        <section className="mb-10 md:mb-20 p-5 2xl:p-20 max-w-[1920px] mx-auto">
+        <section className="mb-10 md:mb-20 p-5 2xl:p-20 max-w-[1920px] mx-auto dark:text-white">
           <article className="text-xl leading-6 relative md:text-3xl 2xl:text-4xl">
             <div className="grid grid-cols-12 md:gap-10 mb-10">
               <figure className="col-span-full md:col-start-4 md:col-span-6 md:mb-10">
@@ -168,7 +168,10 @@ export default function Home({}) {
           </article>
         </section>
 
-        <section ref={ref} className="h-fit bg-white ">
+        <section
+          ref={ref}
+          className="h-fit bg-white dark:bg-gray-900 dark:text-white"
+        >
           <motion.article
             style={{ opacity: scrollYProgress }}
             className="py-10 text-xl leading-6 md:text-3xl 2xl:text-5xl md:py-20 flex items-center justify-center md:grid grid-cols-12 gap-10 sticky top-0"
@@ -213,7 +216,7 @@ export default function Home({}) {
             </figure>
           </div>
         </section>
-        <section className="mb-10 md:mb-0 p-5 md:py-20 2xl:p-20 max-w-[1920px] mx-auto">
+        <section className="mb-10 md:mb-0 p-5 md:py-20 2xl:p-20 max-w-[1920px] mx-auto dark:text-white">
           <article className="grid grid-cols-12 gap-y-5 md:gap-10 text-xl leading-6 md:text-3xl 2xl:text-4xl">
             <motion.div
               initial={{ scaleX: 0 }}
@@ -281,7 +284,7 @@ export default function Home({}) {
             </div>
           </article>
         </section>
-        <section className="bg-white mb-5 md:mb-0">
+        <section className="bg-white dark:bg-gray-900 dark:text-white mb-5 md:mb-0">
           <article className="text-xl leading-6 md:text-3xl 2xl:text-4xl p-5 pb-[3.75rem] md:py-20 2xl:p-20 2xl:pb-40 max-w-[1920px] mx-auto">
             <div className="grid grid-cols-12 md:gap-10 mb-10">
               <figure className="mb-5 col-span-full md:col-start-4 md:col-span-6 md:mb-10">
@@ -317,7 +320,7 @@ export default function Home({}) {
             </div>
           </article>
         </section>
-        <section className="relative z-10 bg-red-500 p-5 md:py-20 md:pb-20 2xl:p-20 h-svh max-w-[1920px] mx-auto">
+        <section className="relative z-10 bg-red-500 p-5 md:py-20 md:pb-20 2xl:p-20 h-svh max-w-[1920px] mx-auto dark:text-white">
           <article className="grid grid-cols-12 grid-rows-12 h-full">
             <p className="col-span-full indent-6 md:indent-0 md:col-start-1 row-span-10 md:col-span-8 md:row-span-11 text-xl leading-6 md:text-3xl 2xl:text-4xl tracking-[-0.005em]">
               Last but not least, one of the main reasons I am applying for this

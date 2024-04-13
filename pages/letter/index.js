@@ -92,7 +92,7 @@ export default function Home({}) {
           </header>
           <section className="c-text">
             <p>
-              <mark className="bg-indigo-600 text-white px-1.5 py-0.5">
+              <mark className="bg-indigo-600 text-white px-1.5 py-0.5 dark:text-black dark:bg-white">
                 Dear Tailwind Labs Team
               </mark>
             </p>
