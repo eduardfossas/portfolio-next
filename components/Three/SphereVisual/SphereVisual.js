@@ -3,8 +3,10 @@
 import { shaderMaterial } from "@react-three/drei";
 import { extend, useFrame } from "@react-three/fiber";
 import { AdditiveBlending, Color, MathUtils } from "three";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import useMatchMedia from "hooks/useMatchMedia";
+import { useAtom } from "jotai";
+import { darkModeAtom } from "pages/letter-modern";
 
 const SphereMat = shaderMaterial(
   {
@@ -323,7 +325,7 @@ extend({ SphereMat });
 const SphereVisual = () => {
   const mesh = useRef(null);
   const displacement = useRef(0);
-  const isDarkTheme = useMatchMedia("(prefers-color-scheme: dark)");
+  const [darkMode] = useAtom(darkModeAtom);
 
   useFrame(({ clock }) => {
     mesh.current.uTime = clock.getElapsedTime();
@@ -352,9 +354,9 @@ const SphereVisual = () => {
       <circleGeometry args={[23, 120, 120]} />
       <sphereMat
         ref={mesh}
-        uColor={`${isDarkTheme ? "#ffffff" : "#ef4444"}`}
+        uColor={`${darkMode ? "#ffffff" : "#ef4444"}`}
         uTime={0}
-        blending={isDarkTheme && AdditiveBlending}
+        blending={darkMode && AdditiveBlending}
         uDisplacementStrength={0}
       />
     </mesh>

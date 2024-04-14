@@ -1,13 +1,18 @@
 import Head from "next/head";
 import { Canvas2 } from "@/components/Three/Canvas";
 import { SphereVisual } from "@/components/Three/SphereVisual";
-import { useContext, useRef } from "react";
+import { useContext, useEffect, useRef } from "react";
 import { View } from "@react-three/drei";
 import { VideoPlayer } from "@/components/VideoPlayer/VideoPlayer";
 import Image from "next/image";
 import { ScrollContext } from "context";
 import { motion, transform, useScroll, useTransform } from "framer-motion";
 import { Chooser } from "@/components/Chooser";
+import { useAtom } from "jotai";
+import { atomWithStorage } from "jotai/utils";
+import { ThemeMode } from "@/components/ThemeMode";
+
+export const darkModeAtom = atomWithStorage("darkMode", false);
 
 const Gradient = ({ containerRef, color = "from-red-500" }) => {
   const { scrollYProgress } = useScroll({
@@ -86,6 +91,12 @@ export default function Home({}) {
     target: ref,
     offset: ["end end", "start start"],
   });
+  const [darkMode, setDarkMode] = useAtom(darkModeAtom);
+
+  useEffect(() => {
+    document.documentElement.classList.remove("darkBus");
+    document.documentElement.classList[darkMode ? "add" : "remove"]("dark");
+  }, [darkMode]);
 
   return (
     <>
@@ -391,7 +402,13 @@ export default function Home({}) {
             </p>
           </article>
         </section>
-        <Chooser slug="/letter-modern" />
+        <div className="fixed bottom-5 left-2/4 -translate-x-1/2 center text-center z-10 flex w-full max-w-4xl px-5">
+          <Chooser slug="/letter-modern" />
+          <ThemeMode
+            callback={() => setDarkMode(!darkMode)}
+            darkMode={darkMode}
+          />
+        </div>
       </main>
       <Canvas2 containerRef={containerRef} />
     </>

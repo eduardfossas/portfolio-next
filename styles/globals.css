@@ -37,15 +37,35 @@ body::-webkit-scrollbar {
   aspect-ratio: 14/9;
 }
 
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: var(--color-gray-950);
-  }
+.dark body,
+.darkBus body {
+  background-color: var(--color-gray-950);
+}
 
-  :root {
-    --color-slate-500: #cacaca;
-    --color-slate-800: #fafafa;
-    --color-indigo-600: #cacaca;
-    --color-red-500: var(--color-gray-950);
-  }
+.dark,
+.darkBus {
+  --color-slate-500: #cacaca;
+  --color-slate-800: #fafafa;
+  --color-indigo-600: #cacaca;
+  --color-red-500: var(--color-gray-950);
+}
+
+.darkBus .dark\:text-black {
+  color: black;
+}
+
+.darkBus .dark\:bg-white {
+  background-color: white;
+}
+
+.dark .dark\:fill-white {
+  fill: white;
+}
+
+.dark .dark\:text-white {
+  color: white;
+}
+
+.dark .dark\:bg-gray-900 {
+  background-color: var(--color-gray-900);
 }

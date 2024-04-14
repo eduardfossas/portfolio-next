@@ -10,6 +10,8 @@ import {
   Vector3,
 } from "three";
 import useMatchMedia from "hooks/useMatchMedia";
+import { useAtom } from "jotai";
+import { darkModeAtom } from "pages/letter";
 
 const DUMMY = new Object3D();
 
@@ -35,7 +37,7 @@ extend({ PlateMat });
 
 const Visual = ({ count = 20, color = new Vector3(0, 0, 0) }) => {
   const mesh = useRef();
-  const isDarkTheme = useMatchMedia("(prefers-color-scheme: dark)");
+  const [darkMode] = useAtom(darkModeAtom);
   const instances = useMemo(() => {
     const temp = [];
 
@@ -78,7 +80,7 @@ const Visual = ({ count = 20, color = new Vector3(0, 0, 0) }) => {
           <boxGeometry args={[50, 50, 50]} />
           <meshBasicMaterial
             transparent
-            color={`${isDarkTheme ? "#ffffff" : "#4f46e5"}`}
+            color={`${darkMode ? "#ffffff" : "#4f46e5"}`}
             opacity={0.1}
             depthWrite={false}
             side={BackSide}

@@ -35,7 +35,7 @@ const Chooser = ({ slug }) => {
 
   return (
     <motion.nav
-      className="fixed bottom-5 left-2/4 -translate-x-1/2 center text-center  z-10"
+      className="m-auto relative"
       animate={isOpen ? "open" : "closed"}
     >
       <motion.div
@@ -46,7 +46,7 @@ const Chooser = ({ slug }) => {
           initial={{ opacity: 0 }}
           className={`rounded-full w-fit mb-2 bg-white px-3 py-1 border-1  text-sm ${
             slug === `/letter` &&
-            `pointer-events-none font-bold text-indigo-600 border-indigo-600`
+            `pointer-events-none font-bold text-indigo-600 border-indigo-600 dark:text-black`
           }`}
           variants={variants}
         >
