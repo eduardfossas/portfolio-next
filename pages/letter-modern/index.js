@@ -94,8 +94,8 @@ export default function Home({}) {
   const [darkMode, setDarkMode] = useAtom(darkModeAtom);
 
   useEffect(() => {
-    document.documentElement.classList.remove("darkBus");
-    document.documentElement.classList[darkMode ? "add" : "remove"]("dark");
+    document.documentElement.classList.remove("dark");
+    document.documentElement.classList[darkMode ? "add" : "remove"]("darkBus");
   }, [darkMode]);
 
   return (
@@ -137,7 +137,7 @@ export default function Home({}) {
           <article className="text-xl leading-6 relative md:text-3xl 2xl:text-4xl">
             <div className="grid grid-cols-12 md:gap-10 mb-10">
               <figure className="col-span-full md:col-start-4 md:col-span-6 md:mb-10">
-                <picture className="relative w-full ar-14-9 block">
+                <picture className="relative w-full ar-14-9 block overflow-hidden rounded-md">
                   <Image
                     src="https://a.storyblok.com/f/167748/940x603/3e62e38c75/icaria-magazine.jpg"
                     alt="Screnshot of a magazine"

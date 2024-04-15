@@ -122,7 +122,7 @@ export default function Home({}) {
               Graphic Design could be very advantageous for the team.
             </p>
             <figure className="mb-5 w-full">
-              <picture className="relative w-full ar-14-9 block">
+              <picture className="relative w-full ar-14-9 block overflow-hidden rounded-md">
                 <Image
                   src="https://a.storyblok.com/f/167748/940x603/3e62e38c75/icaria-magazine.jpg"
                   alt="Screnshot of a magazine"

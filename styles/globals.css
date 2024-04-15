@@ -58,14 +58,17 @@ body::-webkit-scrollbar {
   background-color: white;
 }
 
-.dark .dark\:fill-white {
+.dark .dark\:fill-white,
+.darkBus .dark\:fill-white {
   fill: white;
 }
 
-.dark .dark\:text-white {
+.dark .dark\:text-white,
+.darkBus .dark\:text-white {
   color: white;
 }
 
-.dark .dark\:bg-gray-900 {
+.dark .dark\:bg-gray-900,
+.darkBus .dark\:bg-gray-900 {
   background-color: var(--color-gray-900);
 }

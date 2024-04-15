@@ -73,7 +73,7 @@ const VideoPlayer = ({ video, color = "indigo-600" }) => {
   };
 
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden rounded-md">
       <video src={video} muted={true} playsInline loop ref={videoRef} preload />
 
       <div
@@ -81,12 +81,12 @@ const VideoPlayer = ({ video, color = "indigo-600" }) => {
         onClick={handleVideoClick}
       />
       <div
-        className="absolute w-full h-2 bottom-0 left-0"
+        className="absolute w-full h-1 bottom-0 left-0"
         onClick={handleTimelineClick}
         ref={timelineRef}
       >
         <div
-          className={`h-1 bg-${color} w-full absolute bottom-0 origin-left scale-x-0`}
+          className={`h-1 bg-${color} w-full absolute bottom-0 md:bottom-0 origin-left scale-x-0 dark:bg-white`}
           ref={timelineInnerRef}
         />
       </div>
